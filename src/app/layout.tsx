@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
 
@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Riku Rauhala",
-  description: "Software developer",
+  description: "Software Developer in Helsinki, Finland",
 };
 
 export default function RootLayout({
@@ -24,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <Theme appearance="dark">{children}</Theme>
+        <Theme accentColor="blue" appearance="dark" grayColor="slate">
+          {children}
+        </Theme>
       </body>
     </html>
   );
