@@ -4,7 +4,7 @@ import { aboutItems, name, onlineItems } from "~/content/info";
 import { InfoItems } from "./InfoItems";
 import { ProfilePicture } from "./ProfilePicture";
 
-export const Info = () => {
+export const InfoSection = () => {
   return (
     <Flex
       align="center"

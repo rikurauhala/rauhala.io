@@ -1,6 +1,6 @@
 import { Container, Section } from "@radix-ui/themes";
 
-export const ContentSection = ({
+export const SectionWrapper = ({
   backgroundVariant,
   children,
 }: {
@@ -10,7 +10,7 @@ export const ContentSection = ({
   return (
     <Section
       style={{
-        backgroundColor: backgroundVariant ? "var(--gray-1)" : "var(--gray-3)",
+        backgroundColor: backgroundVariant ? "var(--gray-1)" : "var(--gray-2)",
       }}
     >
       <Container size="3">{children}</Container>

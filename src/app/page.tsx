@@ -1,24 +1,28 @@
 import { Flex } from "@radix-ui/themes";
 
-import { About } from "~/components/About";
-import { ContentSection } from "~/components/ContentSection";
+import { AboutSection } from "~/components/AboutSection";
+import { ContactSection } from "~/components/ContactSection";
 import { Footer } from "~/components/Footer";
-import { Info } from "~/components/Info";
+import { InfoSection } from "~/components/InfoSection";
+import { ProjectsSection } from "~/components/ProjectsSection";
+import { SectionWrapper } from "~/components/SectionWrapper";
 
 export default function Home() {
   const sections = [
-    { component: Info, key: "info" },
-    { component: About, key: "about" },
+    { component: InfoSection, key: "info" },
+    { component: AboutSection, key: "about" },
+    { component: ProjectsSection, key: "projects" },
+    { component: ContactSection, key: "contact" },
+    { component: Footer, key: "footer" },
   ];
 
   return (
     <Flex direction="column">
       {sections.map(({ component: Component, key }, index) => (
-        <ContentSection backgroundVariant={index % 2 == 0} key={key}>
+        <SectionWrapper backgroundVariant={index % 2 == 0} key={key}>
           <Component />
-        </ContentSection>
+        </SectionWrapper>
       ))}
-      <Footer />
     </Flex>
   );
 }
