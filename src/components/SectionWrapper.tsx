@@ -9,6 +9,7 @@ export const SectionWrapper = ({
 }) => {
   return (
     <Section
+      py="8"
       style={{
         backgroundColor: backgroundVariant ? "var(--gray-1)" : "var(--gray-2)",
       }}
