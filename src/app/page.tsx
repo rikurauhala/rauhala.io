@@ -1,11 +1,11 @@
-import { Container, Flex, Text } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
+
+import { Info } from "~/components/Info";
 
 export default function Home() {
   return (
-    <Container size="2">
-      <Flex direction="column" gap="2">
-        <Text>Hello there!</Text>
-      </Flex>
-    </Container>
+    <Flex direction="column" gap="4" my="4">
+      <Info />
+    </Flex>
   );
 }

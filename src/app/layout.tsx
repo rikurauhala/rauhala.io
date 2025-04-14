@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { Theme } from "@radix-ui/themes";
+import { Container, Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 
 import "./globals.css";
@@ -24,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <Theme appearance="dark">{children}</Theme>
+        <Theme appearance="dark">
+          <Container size="3">{children}</Container>
+        </Theme>
       </body>
     </html>
   );
