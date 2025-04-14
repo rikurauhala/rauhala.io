@@ -1,6 +1,6 @@
-import { Card, Heading, Text } from "@radix-ui/themes";
+import { Box, Heading, Text } from "@radix-ui/themes";
 
-export const Section = ({
+export const TextContainer = ({
   content,
   title,
 }: {
@@ -8,13 +8,13 @@ export const Section = ({
   title: string;
 }) => {
   return (
-    <Card>
+    <Box>
       <Heading as="h2">{title}</Heading>
       {content.split("\n\n").map((line, index) => (
         <Text key={index} as="p" mt="3">
           {line}
         </Text>
       ))}
-    </Card>
+    </Box>
   );
 };

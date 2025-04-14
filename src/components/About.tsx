@@ -1,6 +1,6 @@
-import { Section } from "~/components/Section";
+import { TextContainer } from "~/components/TextContainer";
 import { about } from "~/content/about";
 
 export const About = () => {
-  return <Section content={about} title="About" />;
+  return <TextContainer content={about} title="About" />;
 };

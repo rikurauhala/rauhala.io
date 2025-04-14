@@ -1,4 +1,4 @@
-import { Card, Flex } from "@radix-ui/themes";
+import { Flex } from "@radix-ui/themes";
 
 import { HyperLink } from "~/components/HyperLink";
 import { authorUrl, licenseUrl, sourceUrl } from "~/content/footer";
@@ -11,17 +11,15 @@ export const Footer = () => {
   ];
 
   return (
-    <Card>
-      <Flex
-        align="center"
-        direction={{ xs: "column", sm: "row" }}
-        gap="4"
-        justify="center"
-      >
-        {items.map(({ key, text, url }) => (
-          <HyperLink key={key} href={url} text={text} />
-        ))}
-      </Flex>
-    </Card>
+    <Flex
+      align="center"
+      direction={{ xs: "column", sm: "row" }}
+      gap="4"
+      justify="center"
+    >
+      {items.map(({ key, text, url }) => (
+        <HyperLink key={key} href={url} text={text} />
+      ))}
+    </Flex>
   );
 };
