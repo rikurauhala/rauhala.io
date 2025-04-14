@@ -1,13 +1,6 @@
 import he from "he";
 
 const letters = [
-  "&#x6D;",
-  "&#x61;",
-  "&#x69;",
-  "&#x6C;",
-  "&#x74;",
-  "&#x6F;",
-  "&#x3A;",
   "&#x72;",
   "&#x69;",
   "&#x6B;",
@@ -29,7 +22,10 @@ export const author = {
   name: "Riku Rauhala",
   profession: "Software Developer",
   location: "Helsinki, Finland",
+} as const;
+
+export const contact = {
   gitHub: "rikurauhala",
   linkedIn: "rikurauhala",
-  emailAddress: he.decode(letters.join("")),
+  email: he.decode(letters.join("")),
 } as const;
