@@ -13,7 +13,9 @@ export const SectionWrapper = ({
         backgroundColor: backgroundVariant ? "var(--gray-1)" : "var(--gray-2)",
       }}
     >
-      <Container size="3">{children}</Container>
+      <Container px="5" size="3">
+        {children}
+      </Container>
     </Section>
   );
 };
