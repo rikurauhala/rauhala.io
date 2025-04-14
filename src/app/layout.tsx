@@ -3,6 +3,7 @@ import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { author } from "~/content/info";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Riku Rauhala",
-  description: "Software Developer in Helsinki, Finland",
+  title: `${author.name}`,
+  description: `${author.profession} from ${author.location}`,
 };
 
 export default function RootLayout({
