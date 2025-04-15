@@ -1,11 +1,13 @@
-import { Container, Section } from "@radix-ui/themes";
+import { Container, Heading, Section } from "@radix-ui/themes";
 
 export const SectionWrapper = ({
   backgroundVariant,
   children,
+  title,
 }: {
   backgroundVariant: boolean;
   children: React.ReactNode;
+  title: string | null;
 }) => {
   return (
     <Section
@@ -15,6 +17,7 @@ export const SectionWrapper = ({
       }}
     >
       <Container px="5" size="3">
+        {title && <Heading as="h2">{title}</Heading>}
         {children}
       </Container>
     </Section>

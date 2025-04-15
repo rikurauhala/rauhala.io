@@ -9,17 +9,21 @@ import { SectionWrapper } from "~/components/SectionWrapper";
 
 export default function Home() {
   const sections = [
-    { component: InfoSection, key: "info" },
-    { component: AboutSection, key: "about" },
-    { component: ProjectsSection, key: "projects" },
-    { component: ContactSection, key: "contact" },
-    { component: Footer, key: "footer" },
-  ];
+    { component: InfoSection, key: "info", title: null },
+    { component: AboutSection, key: "about", title: "About" },
+    { component: ProjectsSection, key: "projects", title: "Projects" },
+    { component: ContactSection, key: "contact", title: "Contact" },
+    { component: Footer, key: "footer", title: null },
+  ] as const;
 
   return (
     <Flex direction="column">
-      {sections.map(({ component: Component, key }, index) => (
-        <SectionWrapper backgroundVariant={index % 2 == 0} key={key}>
+      {sections.map(({ component: Component, key, title }, index) => (
+        <SectionWrapper
+          backgroundVariant={index % 2 == 0}
+          key={key}
+          title={title}
+        >
           <Component />
         </SectionWrapper>
       ))}
