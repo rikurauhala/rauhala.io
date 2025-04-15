@@ -6,7 +6,7 @@ export const HyperLink = ({ href, text }: { href: string; text: string }) => {
     <Link href={href} rel="noopener noreferrer" target="_blank">
       <Flex align="center" gap="1">
         {text}
-        <AccessibleIcon label="opens in new window">
+        <AccessibleIcon label="opens in new tab">
           <OpenInNewWindowIcon />
         </AccessibleIcon>
       </Flex>
