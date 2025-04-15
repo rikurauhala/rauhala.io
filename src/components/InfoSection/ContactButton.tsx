@@ -3,7 +3,7 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Button } from "@radix-ui/themes";
+import { AccessibleIcon, Button } from "@radix-ui/themes";
 import Link from "next/link";
 
 import { contact } from "~/content/info";
@@ -32,15 +32,21 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
     },
   } as const;
 
+  const selectedVariant = variants[variant];
+
   return (
     <Link
-      href={variants[variant].href}
+      tabIndex={-1}
+      href={selectedVariant.href}
+      passHref
       rel="noopener noreferrer"
       target="_blank"
     >
       <Button style={{ cursor: "pointer" }} variant="outline">
-        {variants[variant].icon}
-        {variants[variant].label}
+        <AccessibleIcon label={`${selectedVariant.label} icon`}>
+          {selectedVariant.icon}
+        </AccessibleIcon>
+        {selectedVariant.label}
       </Button>
     </Link>
   );

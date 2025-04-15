@@ -1,12 +1,14 @@
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
-import { Flex, Link } from "@radix-ui/themes";
+import { AccessibleIcon, Flex, Link } from "@radix-ui/themes";
 
 export const HyperLink = ({ href, text }: { href: string; text: string }) => {
   return (
     <Link href={href} rel="noopener noreferrer" target="_blank">
       <Flex align="center" gap="1">
         {text}
-        <OpenInNewWindowIcon />
+        <AccessibleIcon label="opens in new window">
+          <OpenInNewWindowIcon />
+        </AccessibleIcon>
       </Flex>
     </Link>
   );
