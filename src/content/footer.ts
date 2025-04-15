@@ -3,6 +3,7 @@ const madeInText = "Made in Helsinki";
 const sourceUrl = `https://github.com/rikurauhala/rauhala-io`;
 const licenseUrl = `${sourceUrl}/blob/main/LICENSE.md`;
 const radixUiUrl = "https://www.radix-ui.com";
+const vercelUrl = "https://vercel.com";
 
 export const footerItems = {
   copyright,
@@ -10,4 +11,5 @@ export const footerItems = {
   sourceUrl,
   licenseUrl,
   radixUiUrl,
-};
+  vercelUrl,
+} as const;
