@@ -17,7 +17,11 @@ export const SectionWrapper = ({
       }}
     >
       <Container px="5" size="3">
-        {title && <Heading as="h2">{title}</Heading>}
+        {title && (
+          <Heading as="h2" size="6">
+            {title}
+          </Heading>
+        )}
         {children}
       </Container>
     </Section>
