@@ -4,7 +4,6 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import { AccessibleIcon, Button } from "@radix-ui/themes";
-import Link from "next/link";
 
 import { contact } from "~/content/info";
 
@@ -35,19 +34,13 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
   const selectedVariant = variants[variant];
 
   return (
-    <Link
-      tabIndex={-1}
-      href={selectedVariant.href}
-      passHref
-      rel="noopener noreferrer"
-      target="_blank"
-    >
+    <a href={selectedVariant.href} rel="noopener noreferrer" target="_blank">
       <Button variant="ghost">
         <AccessibleIcon label={`${selectedVariant.label} icon`}>
           {selectedVariant.icon}
         </AccessibleIcon>
         {selectedVariant.label}
       </Button>
-    </Link>
+    </a>
   );
 };
