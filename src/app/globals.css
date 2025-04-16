@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+button {
+  cursor: pointer !important;
+}
+
 .radix-themes {
   --default-font-family: var(--font-inter);
 }
