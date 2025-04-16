@@ -14,7 +14,7 @@ export const Footer = () => {
   return (
     <Flex
       align="center"
-      direction={{ initial: "column", md: "row" }}
+      direction={{ initial: "column-reverse", md: "row" }}
       gap="8"
       justify="between"
     >
