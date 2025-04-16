@@ -23,8 +23,6 @@ export const InfoSection = () => {
         <ContactButton variant="gitHub" />
         <Separator orientation="vertical" />
         <ContactButton variant="linkedIn" />
-        <Separator orientation="vertical" />
-        <ContactButton variant="email" />
       </Flex>
     </Flex>
   );
