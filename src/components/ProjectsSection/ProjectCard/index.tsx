@@ -1,7 +1,6 @@
 import {
   AspectRatio,
   Box,
-  Button,
   Card,
   Flex,
   Heading,
@@ -11,6 +10,8 @@ import {
 
 import { Project } from "~/types";
 import { getBackgroundGradient } from "~/utils/color";
+import { ViewSourceButton } from "./ViewSourceButton";
+import { ReadMoreButton } from "./ReadMoreButton";
 
 export const ProjectCard = ({
   index,
@@ -40,14 +41,19 @@ export const ProjectCard = ({
             {project.description}
           </Text>
         </Flex>
-        <Flex direction="row" gap="2">
-          <Button style={{ flex: 1 }} variant="outline">
-            View source
-          </Button>
-          <Button style={{ flex: 1 }} variant="solid">
-            Read more
-          </Button>
-        </Flex>
+        <Inset side="bottom">
+          <Box
+            p="3"
+            style={{
+              backgroundColor: "var(--gray-4)",
+            }}
+          >
+            <Flex direction="row" gap="3">
+              <ViewSourceButton repository={project.repository} />
+              <ReadMoreButton />
+            </Flex>
+          </Box>
+        </Inset>
       </Flex>
     </Card>
   );

@@ -42,7 +42,7 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <Button style={{ cursor: "pointer" }} variant="ghost">
+      <Button variant="ghost">
         <AccessibleIcon label={`${selectedVariant.label} icon`}>
           {selectedVariant.icon}
         </AccessibleIcon>
