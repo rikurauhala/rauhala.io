@@ -1,12 +1,13 @@
 import { Avatar, Box } from "@radix-ui/themes";
 
 import { author } from "~/content/info";
+import { getBorderGradient } from "~/utils/color";
 
 export const ProfilePicture = () => {
   return (
     <Box
       style={{
-        background: "linear-gradient(45deg, var(--crimson-11), var(--blue-11))",
+        background: getBorderGradient(),
         borderRadius: "50%",
         padding: "2px",
       }}
