@@ -17,7 +17,7 @@ export const ProfilePicture = () => {
         fallback="R"
         radius="full"
         size="9"
-        src="/img/riku-rauhala.jpg"
+        src="/img/riku-rauhala.webp"
       />
     </Box>
   );
