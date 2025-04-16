@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@radix-ui/themes";
+import { Flex, Heading, Separator, Text } from "@radix-ui/themes";
 
 import { author } from "~/content/info";
 import { ContactButton } from "./ContactButton";
@@ -19,9 +19,11 @@ export const InfoSection = () => {
           {author.location}
         </Text>
       </Flex>
-      <Flex align="center" direction="row" gap="2">
+      <Flex align="center" direction="row" gap="4">
         <ContactButton variant="gitHub" />
+        <Separator orientation="vertical" />
         <ContactButton variant="linkedIn" />
+        <Separator orientation="vertical" />
         <ContactButton variant="email" />
       </Flex>
     </Flex>
