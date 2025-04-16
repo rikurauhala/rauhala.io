@@ -3,6 +3,5 @@ export interface Project {
   name: string;
   duration: string;
   description: string;
-  technologies: string[];
-  repository: string;
+  repository: string | null;
 }
