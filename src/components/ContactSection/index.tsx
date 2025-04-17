@@ -22,9 +22,12 @@ export const ContactSection = () => {
 
         <Box>
           <Text color="gray" size="2">
-            Your email
+            Your email address
           </Text>
-          <TextField.Root placeholder="Your email address" type="email">
+          <TextField.Root
+            placeholder="Type your email address here"
+            type="email"
+          >
             <TextField.Slot>
               <EnvelopeClosedIcon />
             </TextField.Slot>
@@ -35,7 +38,7 @@ export const ContactSection = () => {
           <Text color="gray" size="2">
             Your message
           </Text>
-          <TextArea placeholder="Your message" resize="vertical" />
+          <TextArea placeholder="Type your message here" resize="vertical" />
         </Box>
 
         <Flex direction="row" gap="3">
