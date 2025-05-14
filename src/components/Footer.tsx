@@ -24,7 +24,7 @@ export const Footer = () => {
         gap="1"
       >
         <Text color="gray">{footerItems.copyright}</Text>
-        <Text color="gray">{footerItems.madeInText}</Text>
+        <Text color="gray">{footerItems.version}</Text>
       </Flex>
       <Flex align="center" direction={{ initial: "column", md: "row" }} gap="4">
         {links.map(({ key, text, url }) => (
