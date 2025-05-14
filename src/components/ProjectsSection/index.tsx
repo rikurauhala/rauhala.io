@@ -9,8 +9,8 @@ export const ProjectsSection = () => {
     <Flex direction="column" gap="4">
       <TextContainer content={projectsSectionContent} />
       <Grid columns={{ initial: "1", sm: "2" }} gap="4">
-        {projects.map((project, index) => (
-          <ProjectCard index={index} key={project.key} project={project} />
+        {projects.map((project) => (
+          <ProjectCard key={project.key} project={project} />
         ))}
       </Grid>
     </Flex>
