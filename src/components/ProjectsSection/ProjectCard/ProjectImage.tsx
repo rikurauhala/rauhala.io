@@ -8,6 +8,8 @@ export const ProjectImage = ({
   image: string | null;
   projectName: string;
 }) => {
+  const padding = 40;
+
   return (
     <AspectRatio ratio={16 / 9} style={{ backgroundColor: "var(--blue-1)" }}>
       {image && (
@@ -15,7 +17,7 @@ export const ProjectImage = ({
           alt={`Illustration for project ${projectName}`}
           fill
           src={`img/undraw/${image}.svg`}
-          style={{ padding: 50 }}
+          style={{ paddingBottom: padding, paddingTop: padding }}
         />
       )}
     </AspectRatio>
