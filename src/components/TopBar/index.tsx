@@ -1,8 +1,8 @@
-import { MoonIcon } from "@radix-ui/react-icons";
-import { Container, Flex, IconButton, TabNav } from "@radix-ui/themes";
+import { Container, Flex, TabNav } from "@radix-ui/themes";
 
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { NavigationLink } from "./NavigationLink";
+import { ThemeButton } from "./ThemeButton";
 
 export const TopBar = () => {
   return (
@@ -22,9 +22,7 @@ export const TopBar = () => {
             <NavigationLink href="/blog" text="Blog" />
           </TabNav.Root>
         </Flex>
-        <IconButton variant="ghost">
-          <MoonIcon />
-        </IconButton>
+        <ThemeButton />
       </Flex>
     </Container>
   );
