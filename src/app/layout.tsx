@@ -2,10 +2,12 @@ import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 
 import { Footer } from "~/components/Footer";
+import { TopBar } from "~/components/TopBar";
 import { author } from "~/content/info";
 import { inter } from "~/utils/fonts";
 import "~/utils/radix";
 import "./globals.css";
+import { TOP_BAR_HEIGHT } from "~/constants";
 
 export const metadata: Metadata = {
   title: `${author.name}`,
@@ -30,7 +32,19 @@ export default function RootLayout({
             minHeight: "100vh",
           }}
         >
-          <main style={{ flex: 1 }}>{children}</main>
+          <nav
+            style={{
+              position: "fixed",
+              top: 0,
+              width: "100%",
+              zIndex: 69,
+            }}
+          >
+            <TopBar />
+          </nav>
+          <main style={{ flex: 1, paddingTop: TOP_BAR_HEIGHT }}>
+            {children}
+          </main>
           <footer>
             <Footer />
           </footer>

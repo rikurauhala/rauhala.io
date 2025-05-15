@@ -4,11 +4,11 @@ export const SectionWrapper = ({
   children,
   darkBackground,
   title,
-}: {
+}: Readonly<{
   children: React.ReactNode;
   darkBackground: boolean;
   title?: string | null;
-}) => {
+}>) => {
   return (
     <Section
       py="8"
