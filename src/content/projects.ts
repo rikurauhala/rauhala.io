@@ -27,8 +27,8 @@ export const projects: Project[] = [
     repository: "rikurauhala/rauhala-io",
   },
   {
-    id: "course-assistant-duty",
-    name: "Course assistant duty",
+    id: "teaching-assistant",
+    name: "Teaching assistant",
     image: "educator",
     description: "What I learned from teaching others what I know",
     repository: null,
