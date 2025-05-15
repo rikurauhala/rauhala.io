@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 
 import { Footer } from "~/components/Footer";
 import { TopBar } from "~/components/TopBar";
-import { author } from "~/content/info";
+import { TOP_BAR_HEIGHT } from "~/constants";
 import { inter } from "~/utils/fonts";
+import { getDescription, getTitle } from "~/utils/meta";
 import "~/utils/radix";
 import "./globals.css";
-import { TOP_BAR_HEIGHT } from "~/constants";
 
 export const metadata: Metadata = {
-  title: `${author.name}`,
-  description: `${author.profession} from ${author.location}`,
+  title: getTitle(),
+  description: getDescription(),
 };
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
           appearance="dark"
           grayColor="slate"
           style={{
+            backgroundColor: "var(--gray-2)",
             display: "flex",
             flexDirection: "column",
             minHeight: "100vh",

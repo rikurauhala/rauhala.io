@@ -1,9 +1,9 @@
 import { Box, Card, Flex, Heading, Inset, Text } from "@radix-ui/themes";
 
 import { Project } from "~/types";
-import { ViewSourceButton } from "./ViewSourceButton";
 import { ReadMoreButton } from "./ReadMoreButton";
 import { ProjectImage } from "./ProjectImage";
+import { ViewSourceButton } from "./ViewSourceButton";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
