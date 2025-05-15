@@ -1,5 +1,8 @@
-import { Text } from "@radix-ui/themes";
+"use client";
+
+import { TabNav } from "@radix-ui/themes";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const NavigationLink = ({
   href,
@@ -8,9 +11,11 @@ export const NavigationLink = ({
   href: string;
   text: string;
 }) => {
+  const pathname = usePathname();
+
   return (
-    <Link href={href} style={{ textDecoration: "none" }}>
-      <Text color="indigo">{text}</Text>
-    </Link>
+    <TabNav.Link active={href === pathname} asChild>
+      <Link href={href}>{text}</Link>
+    </TabNav.Link>
   );
 };

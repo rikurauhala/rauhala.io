@@ -1,5 +1,5 @@
 import { MoonIcon } from "@radix-ui/react-icons";
-import { Container, Flex, IconButton } from "@radix-ui/themes";
+import { Container, Flex, IconButton, TabNav } from "@radix-ui/themes";
 
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { NavigationLink } from "./NavigationLink";
@@ -10,15 +10,17 @@ export const TopBar = () => {
       px="5"
       size="3"
       style={{
-        backgroundColor: "var(--indigo-2)",
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
         height: TOP_BAR_HEIGHT,
         justifyContent: "center",
       }}
     >
       <Flex align="center" justify="between">
-        <Flex gap="3">
-          <NavigationLink href="/" text="Home" />
-          <NavigationLink href="/blog" text="Blog" />
+        <Flex align="center" gap="3">
+          <TabNav.Root>
+            <NavigationLink href="/" text="Home" />
+            <NavigationLink href="/blog" text="Blog" />
+          </TabNav.Root>
         </Flex>
         <IconButton variant="ghost">
           <MoonIcon />
