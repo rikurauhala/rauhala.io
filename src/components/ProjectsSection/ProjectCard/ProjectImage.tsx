@@ -16,7 +16,7 @@ export const ProjectImage = ({
         <Image
           alt={`Illustration for project ${projectName}`}
           fill
-          src={`img/undraw/${image}.svg`}
+          src={`/img/undraw/${image}.svg`}
           style={{ paddingBottom: padding, paddingTop: padding }}
         />
       )}
