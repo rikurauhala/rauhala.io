@@ -34,13 +34,13 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
   const selectedVariant = variants[variant];
 
   return (
-    <a href={selectedVariant.href} rel="noopener noreferrer" target="_blank">
-      <Button variant="ghost">
+    <Button asChild variant="ghost">
+      <a href={selectedVariant.href} rel="noopener noreferrer" target="_blank">
         <AccessibleIcon label={`${selectedVariant.label} icon`}>
           {selectedVariant.icon}
         </AccessibleIcon>
         {selectedVariant.label}
-      </Button>
-    </a>
+      </a>
+    </Button>
   );
 };
