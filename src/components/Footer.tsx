@@ -2,6 +2,7 @@ import { Flex, Text } from "@radix-ui/themes";
 
 import { HyperLink } from "~/components/HyperLink";
 import { footerItems } from "~/content/footer";
+import { SectionWrapper } from "./SectionWrapper";
 
 export const Footer = () => {
   const links = [
@@ -12,25 +13,31 @@ export const Footer = () => {
   ] as const;
 
   return (
-    <Flex
-      align="center"
-      direction={{ initial: "column-reverse", md: "row" }}
-      gap="8"
-      justify="between"
-    >
+    <SectionWrapper darkBackground>
       <Flex
-        align={{ initial: "center", md: "start" }}
-        direction="column"
-        gap="1"
+        align="center"
+        direction={{ initial: "column-reverse", md: "row" }}
+        gap="8"
+        justify="between"
       >
-        <Text color="gray">{footerItems.copyright}</Text>
-        <Text color="gray">{footerItems.version}</Text>
+        <Flex
+          align={{ initial: "center", md: "start" }}
+          direction="column"
+          gap="1"
+        >
+          <Text color="gray">{footerItems.copyright}</Text>
+          <Text color="gray">{footerItems.version}</Text>
+        </Flex>
+        <Flex
+          align="center"
+          direction={{ initial: "column", md: "row" }}
+          gap="4"
+        >
+          {links.map(({ key, text, url }) => (
+            <HyperLink key={key} href={url} text={text} />
+          ))}
+        </Flex>
       </Flex>
-      <Flex align="center" direction={{ initial: "column", md: "row" }} gap="4">
-        {links.map(({ key, text, url }) => (
-          <HyperLink key={key} href={url} text={text} />
-        ))}
-      </Flex>
-    </Flex>
+    </SectionWrapper>
   );
 };

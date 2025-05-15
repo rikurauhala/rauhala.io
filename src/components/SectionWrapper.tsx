@@ -1,19 +1,19 @@
 import { Container, Heading, Section } from "@radix-ui/themes";
 
 export const SectionWrapper = ({
-  backgroundVariant,
   children,
+  darkBackground,
   title,
 }: {
-  backgroundVariant: boolean;
   children: React.ReactNode;
-  title: string | null;
+  darkBackground: boolean;
+  title?: string | null;
 }) => {
   return (
     <Section
       py="8"
       style={{
-        backgroundColor: backgroundVariant ? "var(--gray-1)" : "var(--gray-2)",
+        backgroundColor: darkBackground ? "var(--gray-1)" : "var(--gray-2)",
       }}
     >
       <Container px="5" size="3">

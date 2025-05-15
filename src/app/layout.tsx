@@ -1,6 +1,7 @@
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 
+import { Footer } from "~/components/Footer";
 import { author } from "~/content/info";
 import { inter } from "~/utils/fonts";
 import "~/utils/radix";
@@ -19,8 +20,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <Theme accentColor="indigo" appearance="dark" grayColor="slate">
-          {children}
+        <Theme
+          accentColor="indigo"
+          appearance="dark"
+          grayColor="slate"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
+          <main style={{ flex: 1 }}>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
         </Theme>
       </body>
     </html>
