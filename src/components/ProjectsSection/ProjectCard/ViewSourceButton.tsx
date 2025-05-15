@@ -22,7 +22,7 @@ export const ViewSourceButton = ({
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Button style={{ width: "100%" }} variant="outline">
+        <Button color="gray" style={{ width: "100%" }} variant="outline">
           {buttonText}
         </Button>
       </a>
