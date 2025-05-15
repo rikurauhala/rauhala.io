@@ -1,4 +1,4 @@
-import { Box, Button } from "@radix-ui/themes";
+import { Button } from "@radix-ui/themes";
 
 export const ViewSourceButton = ({
   repository,
@@ -7,25 +7,25 @@ export const ViewSourceButton = ({
 }) => {
   const buttonText = "View source";
 
-  if (!repository) {
-    return (
-      <Button disabled style={{ flex: 1, width: "100%" }} variant="outline">
-        {buttonText}
-      </Button>
-    );
-  }
-
   return (
-    <Box style={{ flex: 1, width: "100%" }}>
-      <a
-        href={`https://github.com/${repository}`}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <Button color="gray" style={{ width: "100%" }} variant="outline">
+    <Button
+      asChild
+      color="gray"
+      disabled={!repository}
+      style={{ flex: 1 }}
+      variant="outline"
+    >
+      {repository ? (
+        <a
+          href={`https://github.com/${repository}`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           {buttonText}
-        </Button>
-      </a>
-    </Box>
+        </a>
+      ) : (
+        <span>{buttonText}</span>
+      )}
+    </Button>
   );
 };
