@@ -1,7 +1,7 @@
 export interface Project {
-  key: string;
+  id: string;
   name: string;
-  image: string | null;
+  image: string;
   description: string;
   repository: string | null;
 }

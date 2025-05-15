@@ -10,7 +10,7 @@ export const ProjectsSection = () => {
       <TextContainer content={projectsSectionContent} />
       <Grid columns={{ initial: "1", sm: "2" }} gap="4">
         {projects.map((project) => (
-          <ProjectCard key={project.key} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </Grid>
     </Flex>

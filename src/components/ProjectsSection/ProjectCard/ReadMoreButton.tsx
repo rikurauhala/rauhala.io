@@ -1,9 +1,12 @@
 import { Button } from "@radix-ui/themes";
+import Link from "next/link";
 
-export const ReadMoreButton = () => {
+export const ReadMoreButton = ({ id }: { id: string }) => {
   return (
-    <Button style={{ flex: 1 }} variant="solid">
-      Read more
-    </Button>
+    <Link href={`/projects/${id}`} passHref style={{ flex: 1 }}>
+      <Button style={{ width: "100%" }} variant="solid">
+        Read more
+      </Button>
+    </Link>
   );
 };

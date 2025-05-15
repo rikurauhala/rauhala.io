@@ -6,28 +6,28 @@ export const projectsSectionContent = `
 
 export const projects: Project[] = [
   {
-    key: "oodikone",
+    id: "oodikone",
     name: "Oodikone",
     image: "team-collaboration",
     description: "Going full stack, or how I became a professional",
     repository: "UniversityOfHelsinkiCS/oodikone",
   },
   {
-    key: "berry-picker-tracker",
+    id: "berry-picker-tracker",
     name: "Berry Picker Tracker",
     image: "engineering-team",
     description: "Preventing berry pickers from getting lost in the forest",
     repository: "marjanpoimijat",
   },
   {
-    key: "portfolio",
+    id: "portfolio",
     name: "Portfolio",
     image: "programming",
     description: "How I kept outgrowing my portfolio",
     repository: "rikurauhala/rauhala-io",
   },
   {
-    key: "course-assistant-duty",
+    id: "course-assistant-duty",
     name: "Course assistant duty",
     image: "educator",
     description: "What I learned from teaching others what I know",

@@ -29,7 +29,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           >
             <Flex direction="row" gap="3">
               <ViewSourceButton repository={project.repository} />
-              <ReadMoreButton />
+              <ReadMoreButton id={project.id} />
             </Flex>
           </Box>
         </Inset>
