@@ -10,10 +10,10 @@ on:
 jobs:
   lint:
     name: Lint
-    uses: ./.github/workflows/common/lint.yaml
+    uses: ./.github/actions/lint.yaml
   test:
     name: Test
-    uses: ./.github/workflows/common/test.yaml
+    uses: ./.github/actions/test.yaml
   deploy-production:
     name: Deploy to production
     needs:
