@@ -8,7 +8,10 @@ on:
     branches-ignore:
       - main
 jobs:
-  Deploy-Preview:
+  lint-and-test:
+    uses: ./.github/workflows/test.yaml
+  deploy-preview:
+    needs: lint-and-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
