@@ -11,6 +11,7 @@ jobs:
   lint-and-test:
     uses: ./.github/workflows/test.yaml
   deploy-production:
+    name: Deploy to production
     needs: lint-and-test
     runs-on: ubuntu-latest
     steps:

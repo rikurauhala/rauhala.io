@@ -11,6 +11,7 @@ jobs:
   lint-and-test:
     uses: ./.github/workflows/test.yaml
   deploy-preview:
+    name: Deploy to preview
     needs: lint-and-test
     runs-on: ubuntu-latest
     steps:
