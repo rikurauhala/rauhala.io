@@ -8,12 +8,17 @@ on:
     branches:
       - main
 jobs:
-  lint-and-test:
-    name: Lint and test
-    uses: ./.github/workflows/test.yaml
+  lint:
+    name: Lint
+    uses: ./.github/workflows/common/lint.yaml
+  test:
+    name: Test
+    uses: ./.github/workflows/common/test.yaml
   deploy-production:
     name: Deploy to production
-    needs: lint-and-test
+    needs:
+      - lint
+      - test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
