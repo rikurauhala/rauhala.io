@@ -10,10 +10,14 @@ on:
 jobs:
   lint:
     name: Lint
-    uses: ./.github/actions/lint.yaml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/lint
   test:
     name: Test
-    uses: ./.github/actions/test.yaml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/test
   deploy-production:
     name: Deploy to production
     needs:
