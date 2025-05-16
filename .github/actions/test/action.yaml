@@ -11,11 +11,15 @@ runs:
         node-version: 20
     - name: Install dependencies
       run: npm ci
+      shell: bash
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+      shell: bash
     - name: Run Playwright tests
       run: npx playwright test
-    - uses: actions/upload-artifact@v4
+      shell: bash
+    - name: Upload Playwright report
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
