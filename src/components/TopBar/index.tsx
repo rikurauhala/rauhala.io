@@ -2,7 +2,6 @@ import { Container, Flex, TabNav } from "@radix-ui/themes";
 
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { NavigationLink } from "./NavigationLink";
-import { ThemeButton } from "./ThemeButton";
 
 export const TopBar = () => {
   return (
@@ -15,14 +14,11 @@ export const TopBar = () => {
         justifyContent: "center",
       }}
     >
-      <Flex align="center" justify="between">
-        <Flex align="center" gap="3">
-          <TabNav.Root>
-            <NavigationLink href="/" text="Home" />
-            <NavigationLink href="/blog" text="Blog" />
-          </TabNav.Root>
-        </Flex>
-        <ThemeButton />
+      <Flex align="center" gap="3">
+        <TabNav.Root>
+          <NavigationLink href="/" text="Home" />
+          <NavigationLink href="/blog" text="Blog" />
+        </TabNav.Root>
       </Flex>
     </Container>
   );
