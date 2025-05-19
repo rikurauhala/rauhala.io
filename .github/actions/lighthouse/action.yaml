@@ -10,7 +10,10 @@ runs:
         node-version: 20
     - name: Install dependencies
       run: npm install && npm install -g @lhci/cli@0.14.x
+      shell: bash
     - name: Build project
       run: npm run build
+      shell: bash
     - name: Run Lighthouse CI
       run: lhci autorun
+      shell: bash
