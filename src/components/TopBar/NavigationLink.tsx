@@ -12,6 +12,8 @@ export const NavigationLink = ({
   text: string;
 }) => {
   const pathname = usePathname();
+  console.log("pathname", pathname);
+  console.log("href", href);
 
   return (
     <TabNav.Link active={href === pathname} asChild>
