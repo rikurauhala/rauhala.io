@@ -1,5 +1,10 @@
 name: Lighthouse
 
+inputs:
+  LHCI_GITHUB_APP_TOKEN:
+    description: "LHCI GitHub App Token"
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -18,4 +23,4 @@ runs:
       run: lhci autorun
       shell: bash
       env:
-        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        LHCI_GITHUB_APP_TOKEN: ${{ inputs.LHCI_GITHUB_APP_TOKEN }}
