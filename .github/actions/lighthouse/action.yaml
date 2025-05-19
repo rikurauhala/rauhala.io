@@ -1,4 +1,4 @@
-name: Linting
+name: Lighthouse
 
 runs:
   using: "composite"
@@ -17,3 +17,5 @@ runs:
     - name: Run Lighthouse CI
       run: lhci autorun
       shell: bash
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

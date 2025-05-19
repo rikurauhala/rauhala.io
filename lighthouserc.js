@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     upload: {
-      target: "lighthouse-ci",
+      target: "temporary-public-storage",
     },
   },
 };
