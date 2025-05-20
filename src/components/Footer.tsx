@@ -8,8 +8,8 @@ export const Footer = () => {
   const links = [
     { key: "source", text: "Source code", url: footerItems.sourceUrl },
     { key: "license", text: "License", url: footerItems.licenseUrl },
-    { key: "radix", text: "Built with Radix", url: footerItems.radixUiUrl },
-    { key: "vercel", text: "Deployed to Vercel", url: footerItems.vercelUrl },
+    { key: "credits", text: "Credits", url: footerItems.creditsUrl },
+    { key: "changelog", text: "Changelog", url: footerItems.changelogUrl },
   ] as const;
 
   return (

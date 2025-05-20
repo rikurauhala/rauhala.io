@@ -2,14 +2,14 @@ const copyright = "© 2025 Riku Rauhala";
 const version = `Version ${process.env.npm_package_version}`;
 const sourceUrl = `https://github.com/rikurauhala/rauhala-io`;
 const licenseUrl = `${sourceUrl}/blob/main/LICENSE.md`;
-const radixUiUrl = "https://www.radix-ui.com";
-const vercelUrl = "https://vercel.com";
+const creditsUrl = `${sourceUrl}/blob/main/CREDITS.md`;
+const changelogUrl = `${sourceUrl}/releases`;
 
 export const footerItems = {
   copyright,
   version,
   sourceUrl,
   licenseUrl,
-  radixUiUrl,
-  vercelUrl,
+  creditsUrl,
+  changelogUrl,
 } as const;
