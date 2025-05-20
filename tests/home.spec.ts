@@ -75,4 +75,68 @@ test.describe("Home page", () => {
       });
     });
   });
+
+  test("About section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "About" })).toBeVisible();
+    await expect(page.getByText("Hi there!")).toBeVisible();
+  });
+
+  test.describe("Project section", () => {
+    test("content", async ({ page }) => {
+      await expect(
+        page.getByRole("heading", { name: "Projects" })
+      ).toBeVisible();
+      await expect(page.getByText("Over the years")).toBeVisible();
+    });
+
+    test("Project cards", async ({ page }) => {
+      const projects = [
+        "Oodikone",
+        "Berry Picker Tracker",
+        "Portfolio",
+        "Teaching assistant",
+      ];
+
+      for (const project of projects) {
+        const projectCard = page.getByRole("heading", { name: project });
+        await expect(projectCard).toBeVisible();
+      }
+    });
+  });
+
+  test.skip("Contact section", async () => {
+    // To be implemented
+  });
+
+  test("Footer", async ({ page }) => {
+    const sourceCodeLink = page.getByRole("link", { name: "Source code" });
+    await expect(sourceCodeLink).toHaveAttribute(
+      "href",
+      "https://github.com/rikurauhala/rauhala-io"
+    );
+
+    const licenseLink = page.getByRole("link", { name: "License" });
+    await expect(licenseLink).toHaveAttribute(
+      "href",
+      "https://github.com/rikurauhala/rauhala-io/blob/main/LICENSE.md"
+    );
+
+    const creditsLink = page.getByRole("link", { name: "Credits" });
+    await expect(creditsLink).toHaveAttribute(
+      "href",
+      "https://github.com/rikurauhala/rauhala-io/blob/main/CREDITS.md"
+    );
+
+    const changelogLink = page.getByRole("link", { name: "Changelog" });
+    await expect(changelogLink).toHaveAttribute(
+      "href",
+      "https://github.com/rikurauhala/rauhala-io/releases"
+    );
+
+    const copyright = page.getByText(/© 2025 Riku Rauhala/);
+    await expect(copyright).toBeVisible();
+
+    const version = page.getByText(/Version \d+\.\d+\.\d+/);
+    await expect(version).toBeVisible();
+  });
 });
