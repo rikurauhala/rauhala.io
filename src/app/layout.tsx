@@ -2,7 +2,7 @@ import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 
 import { Footer } from "~/components/Footer";
-import { TopBar } from "~/components/TopBar";
+import { NavBar } from "~/components/NavBar";
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { inter } from "~/utils/fonts";
 import { getDescription, getTitle } from "~/utils/meta";
@@ -41,7 +41,7 @@ export default function RootLayout({
               zIndex: 69,
             }}
           >
-            <TopBar />
+            <NavBar />
           </nav>
           <main style={{ flex: 1, paddingTop: TOP_BAR_HEIGHT }}>
             {children}

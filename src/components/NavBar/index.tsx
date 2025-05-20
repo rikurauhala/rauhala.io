@@ -3,7 +3,7 @@ import { Container, Flex, TabNav } from "@radix-ui/themes";
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { NavigationLink } from "./NavigationLink";
 
-export const TopBar = () => {
+export const NavBar = () => {
   return (
     <Container
       px="5"
