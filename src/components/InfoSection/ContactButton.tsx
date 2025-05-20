@@ -25,7 +25,7 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
       label: "GitHub",
     },
     linkedIn: {
-      href: `https://www.linkedin.com/in/${contact.linkedIn}`,
+      href: `https://linkedin.com/in/${contact.linkedIn}`,
       icon: <LinkedInLogoIcon />,
       label: "LinkedIn",
     },
