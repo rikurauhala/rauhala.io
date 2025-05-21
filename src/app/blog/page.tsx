@@ -1,10 +1,8 @@
 import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import { Metadata } from "next";
 
-import { getTitle } from "~/utils/meta";
-
 export const metadata: Metadata = {
-  title: getTitle("Blog"),
+  title: "Blog",
   description: "Blog about software engineering, web development, and more",
 };
 

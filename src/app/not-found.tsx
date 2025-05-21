@@ -9,10 +9,8 @@ import {
 } from "@radix-ui/themes";
 import { Metadata } from "next";
 
-import { getTitle } from "~/utils/meta";
-
 export const metadata: Metadata = {
-  title: getTitle("Not found"),
+  title: "Not found",
   description: "Not found",
 };
 

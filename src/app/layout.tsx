@@ -1,17 +1,25 @@
 import { Theme } from "@radix-ui/themes";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/NavBar";
 import { TOP_BAR_HEIGHT } from "~/constants";
+import { author } from "~/content/info";
 import { inter } from "~/utils/fonts";
-import { getDescription, getTitle } from "~/utils/meta";
 import "~/utils/radix";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: getTitle(),
-  description: getDescription(),
+  title: {
+    template: `%s - ${author.name}`,
+    default: author.name,
+  },
+  description: `${author.profession} from ${author.location}`,
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#3E63DD",
 };
 
 export default function RootLayout({

@@ -16,6 +16,7 @@ test.describe("Navigation", () => {
 
     await page.getByRole("link", { name: "Blog" }).click();
     await expect(page).toHaveURL(/.*blog/);
+    await expect(page).toHaveTitle("Blog - Riku Rauhala");
 
     await expect(blogLink).toHaveAttribute("data-active", "");
     await expect(blogLink).toHaveAttribute("aria-current", "page");
@@ -25,6 +26,7 @@ test.describe("Navigation", () => {
 
     await page.getByRole("link", { name: "Home" }).click();
     await expect(page).toHaveURL("/");
+    await expect(page).toHaveTitle("Riku Rauhala");
 
     await expect(homeLink).toHaveAttribute("data-active", "");
     await expect(homeLink).toHaveAttribute("aria-current", "page");
@@ -48,6 +50,8 @@ test.describe("Navigation", () => {
 
   test("Not found page", async ({ page }) => {
     await page.goto("/this-page-does-not-exist");
+    await expect(page).toHaveTitle("Not found - Riku Rauhala");
+
     const notFoundText = page.getByText("Not found");
     await expect(notFoundText).toBeVisible();
     const notFoundDescription = page.getByText("This page does not exist");
@@ -57,7 +61,9 @@ test.describe("Navigation", () => {
     });
     await expect(notFoundLink).toBeVisible();
     await notFoundLink.click();
+
     await expect(page).toHaveURL("/");
+    await expect(page).toHaveTitle("Riku Rauhala");
 
     const homeLink = page.getByRole("link", { name: "Home" });
     await expect(homeLink).toHaveAttribute("data-active", "");
