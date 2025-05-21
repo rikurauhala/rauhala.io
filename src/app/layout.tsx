@@ -10,11 +10,16 @@ import "~/utils/radix";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  authors: {
+    name: author.name,
+  },
+  creator: author.name,
   title: {
     template: `%s - ${author.name}`,
     default: author.name,
   },
   description: `${author.profession} from ${author.location}`,
+  generator: "Next.js",
 };
 
 export const viewport: Viewport = {
