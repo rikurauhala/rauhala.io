@@ -34,7 +34,7 @@ test.describe("Home page", () => {
     test.describe("Contact buttons", () => {
       test("GitHub button", async ({ page, context }) => {
         const pagePromise = context.waitForEvent("page");
-        const gitHubButton = await page.getByRole("link", { name: "GitHub" });
+        const gitHubButton = page.getByRole("link", { name: "GitHub" });
         await expect(gitHubButton).toBeVisible();
         await expect(gitHubButton).toHaveAttribute(
           "href",
@@ -54,9 +54,7 @@ test.describe("Home page", () => {
 
       test("LinkedIn button", async ({ page, context }) => {
         const pagePromise = context.waitForEvent("page");
-        const linkedInButton = await page.getByRole("link", {
-          name: "LinkedIn",
-        });
+        const linkedInButton = page.getByRole("link", { name: "LinkedIn" });
         await expect(linkedInButton).toBeVisible();
         await expect(linkedInButton).toHaveAttribute(
           "href",
@@ -72,6 +70,12 @@ test.describe("Home page", () => {
         const newPage = await pagePromise;
         await expect(newPage).toHaveURL(/linkedin.com/);
         await newPage.close();
+      });
+
+      test("Email button", async ({ page }) => {
+        const emailButton = page.getByRole("link", { name: "Email" });
+        await expect(emailButton).toBeVisible();
+        await expect(emailButton).toHaveAttribute("href", /^mailto:.*@.*\.io$/);
       });
     });
   });
