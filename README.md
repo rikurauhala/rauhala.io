@@ -1,4 +1,6 @@
 <h1 align="center">
+
+<img src="docs/img/logo.png" height="96px" with="96px" />
   
 <a href="https://rauhala.io">rauhala.io</a>
 
