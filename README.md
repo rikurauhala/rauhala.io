@@ -1,6 +1,6 @@
 <h1 align="center">
   
-Portfolio
+<a href="https://rauhala.io">rauhala.io</a>
 
 </h1>
 
@@ -12,12 +12,14 @@ Portfolio
 
 </div>
 
-<div align="center">
-
-<a href="https://rauhala.io">https://rauhala.io</a>
-
-</div>
-
 ## About
 
 My small corner of the Internet
+
+## License
+
+The source code and documentation in this repository are licensed with MIT. Feel free to fork and make your own version, although as a software developer you should probably write your own website.
+
+Content found under `src/content` is copyrighted by me.
+
+Illustrations in `public/img/undraw` by [unDraw](https://undraw.co/license).
