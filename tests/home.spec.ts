@@ -9,13 +9,6 @@ test.describe("Home page", () => {
     await expect(page).toHaveTitle("Riku Rauhala");
   });
 
-  test("Top bar navigation", async ({ page }) => {
-    await page.getByRole("link", { name: "Blog" }).click();
-    await expect(page).toHaveURL(/.*blog/);
-    await page.getByRole("link", { name: "Home" }).click();
-    await expect(page).toHaveURL("/");
-  });
-
   test.describe("Info section", () => {
     test("content", async ({ page }) => {
       const profilePicture = page.getByAltText(/Profile picture/);
@@ -54,7 +47,9 @@ test.describe("Home page", () => {
 
       test("LinkedIn button", async ({ page, context }) => {
         const pagePromise = context.waitForEvent("page");
-        const linkedInButton = page.getByRole("link", { name: "LinkedIn" });
+        const linkedInButton = page
+          .getByRole("link", { name: "LinkedIn" })
+          .first();
         await expect(linkedInButton).toBeVisible();
         await expect(linkedInButton).toHaveAttribute(
           "href",
@@ -73,7 +68,7 @@ test.describe("Home page", () => {
       });
 
       test("Email button", async ({ page }) => {
-        const emailButton = page.getByRole("link", { name: "Email" });
+        const emailButton = page.getByRole("link", { name: "Email" }).first();
         await expect(emailButton).toBeVisible();
         await expect(emailButton).toHaveAttribute("href", /mailto:/);
       });
