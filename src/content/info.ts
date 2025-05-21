@@ -5,6 +5,7 @@ export const author = {
 } as const;
 
 export const contact = {
-  gitHub: "rikurauhala",
-  linkedIn: "rikurauhala",
+  email: `mailto:${process.env.EMAIL_ADDRESS}`,
+  gitHub: "https://github.com/rikurauhala",
+  linkedIn: "https://linkedin.com/in/rikurauhala",
 } as const;

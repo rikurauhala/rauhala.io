@@ -15,17 +15,17 @@ export const ContactButton = ({ variant }: { variant: Variant }) => {
     { href: string; icon: React.ReactNode; label: string }
   > = {
     email: {
-      href: `mailto:${process.env.EMAIL_ADDRESS}`,
+      href: contact.email,
       icon: <EnvelopeClosedIcon />,
       label: "Email",
     },
     gitHub: {
-      href: `https://github.com/${contact.gitHub}`,
+      href: contact.gitHub,
       icon: <GitHubLogoIcon />,
       label: "GitHub",
     },
     linkedIn: {
-      href: `https://linkedin.com/in/${contact.linkedIn}`,
+      href: contact.linkedIn,
       icon: <LinkedInLogoIcon />,
       label: "LinkedIn",
     },

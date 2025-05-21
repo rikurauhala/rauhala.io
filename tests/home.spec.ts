@@ -108,8 +108,18 @@ test.describe("Home page", () => {
     });
   });
 
-  test.skip("Contact section", async () => {
-    // To be implemented
+  test("Contact section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Contact" })).toBeVisible();
+    await expect(page.getByText("Let's get in touch!")).toBeVisible();
+    const emailLink = page.getByRole("link", { name: "reach me via email" });
+    await expect(emailLink).toHaveAttribute("href", /mailto:/);
+    const linkedInLink = page.getByRole("link", {
+      name: "send me a message on LinkedIn",
+    });
+    await expect(linkedInLink).toHaveAttribute(
+      "href",
+      "https://linkedin.com/in/rikurauhala"
+    );
   });
 
   test("Footer", async ({ page }) => {
@@ -128,7 +138,7 @@ test.describe("Home page", () => {
     const creditsLink = page.getByRole("link", { name: "Credits" });
     await expect(creditsLink).toHaveAttribute(
       "href",
-      "https://github.com/rikurauhala/rauhala-io/blob/main/CREDITS.md"
+      "https://github.com/rikurauhala/rauhala-io/blob/main/docs/credits.md"
     );
 
     const changelogLink = page.getByRole("link", { name: "Changelog" });
