@@ -1,4 +1,5 @@
 name: Lighthouse
+description: Run Lighthouse to monitor performance and accessibility
 
 inputs:
   LHCI_GITHUB_APP_TOKEN:

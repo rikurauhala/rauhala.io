@@ -1,4 +1,5 @@
 name: Testing
+description: End-to-end testing using Playwright
 
 runs:
   using: "composite"
