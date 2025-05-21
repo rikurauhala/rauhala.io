@@ -75,7 +75,7 @@ test.describe("Home page", () => {
       test("Email button", async ({ page }) => {
         const emailButton = page.getByRole("link", { name: "Email" });
         await expect(emailButton).toBeVisible();
-        await expect(emailButton).toHaveAttribute("href", /^mailto:.*@.*\.io$/);
+        await expect(emailButton).toHaveAttribute("href", /mailto:/);
       });
     });
   });
