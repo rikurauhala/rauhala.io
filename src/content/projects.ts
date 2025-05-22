@@ -1,10 +1,10 @@
 import { Project } from "~/types";
 
 export const projectsSectionContent = `
-  Over the years I have worked on a variety of projects in many different organisations.
+  Over the years I have worked on a variety of projects with amazing people in many
+  different organisations.
 
-  Here are some of my favourite projects and the lessons I have learned from them. Click the
-  Read More button to read the full story behind each project!
+  Here are some of my favourite projects and the lessons I have learned from them.
 ` as const;
 
 export const projects: Project[] = [
