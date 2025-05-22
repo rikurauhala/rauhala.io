@@ -57,13 +57,11 @@ test.describe("Navigation", () => {
     await page.goto("/this-page-does-not-exist");
     await expect(page).toHaveTitle("Not found - Riku Rauhala");
 
-    const notFoundText = page.getByText("Not found");
+    const notFoundText = page.getByRole("heading", { name: "Not found" });
     await expect(notFoundText).toBeVisible();
     const notFoundDescription = page.getByText("This page does not exist");
     await expect(notFoundDescription).toBeVisible();
-    const notFoundLink = page.getByRole("link", {
-      name: "Go back to the home page",
-    });
+    const notFoundLink = page.getByRole("link", { name: /Go back/ });
     await expect(notFoundLink).toBeVisible();
     await notFoundLink.click();
 

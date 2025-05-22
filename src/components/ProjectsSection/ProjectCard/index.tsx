@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Project } from "~/types";
 import { ProjectImage } from "./ProjectImage";
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({
+  project,
+}: {
+  project: Omit<Project, "content" | "repository">;
+}) => {
   return (
     <Card style={{ display: "flex", flexDirection: "column" }}>
       <Inset clip="padding-box" pb="current" side="top">

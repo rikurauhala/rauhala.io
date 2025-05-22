@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { SectionWrapper } from "~/components/SectionWrapper";
 import { author } from "~/content/info";
-import { projects } from "~/content/projects";
+import { getProjectById, getProjectIds } from "~/utils/projects";
 
 type Params = { id: string };
 
@@ -15,7 +15,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
 
-  const project = projects.find((project) => project.id === id);
+  const project = await getProjectById(id);
 
   if (!project) {
     return notFound();
@@ -28,9 +28,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
-    id: project.id,
-  }));
+  return await getProjectIds();
 }
 
 export default async function ProjectPage({
@@ -39,7 +37,8 @@ export default async function ProjectPage({
   params: Promise<Params>;
 }) {
   const { id } = await params;
-  const project = projects.find((project) => project.id === id);
+  const project = await getProjectById(id);
+
   if (!project) {
     return notFound();
   }

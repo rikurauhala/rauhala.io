@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 
 import { BASE_URL, BLOG_URL, PROJECTS_URL } from "~/constants";
-import { projects } from "~/content/projects";
+import { getProjectIds } from "~/utils/projects";
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const projects = await getProjectIds();
+
   const paths: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,

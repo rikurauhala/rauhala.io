@@ -1,10 +1,13 @@
 import { Flex, Grid } from "@radix-ui/themes";
 
 import { TextContainer } from "~/components/TextContainer";
-import { projects, projectsSectionContent } from "~/content/projects";
+import { projectsSectionContent } from "~/content/projects";
 import { ProjectCard } from "./ProjectCard";
+import { getProjectDetails } from "~/utils/projects";
 
-export const ProjectsSection = () => {
+export const ProjectsSection = async () => {
+  const projects = await getProjectDetails();
+
   return (
     <Flex direction="column" gap="4">
       <TextContainer content={projectsSectionContent} />
