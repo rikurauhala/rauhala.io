@@ -35,6 +35,11 @@ test.describe("Navigation", () => {
     await expect(blogLink).not.toHaveAttribute("aria-current", "page");
   });
 
+  test("Projects page redirects to front page", async ({ page }) => {
+    await page.goto("/projects");
+    await expect(page).toHaveURL("/");
+  });
+
   test("Project page", async ({ page }) => {
     await page.getByRole("link", { name: "Oodikone" }).click();
     await expect(page).toHaveURL("/projects/oodikone");
