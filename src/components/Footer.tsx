@@ -30,7 +30,7 @@ export const Footer = () => {
         </Flex>
         <Flex
           align="center"
-          direction={{ initial: "column", md: "row" }}
+          direction={{ initial: "column", sm: "row" }}
           gap="4"
         >
           {links.map(({ key, text, url }) => (
