@@ -10,12 +10,12 @@ body {
   margin: 0;
 }
 
-button {
-  cursor: pointer !important;
+a {
+  text-decoration: none;
 }
 
-button:disabled {
-  cursor: not-allowed !important;
+a:hover {
+  text-decoration: underline;
 }
 
 .radix-themes {
