@@ -6,7 +6,7 @@ export const SectionWrapper = ({
   title,
 }: Readonly<{
   children: React.ReactNode;
-  darkBackground: boolean;
+  darkBackground?: boolean;
   title?: string | null;
 }>) => {
   return (
