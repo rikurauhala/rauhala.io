@@ -11,7 +11,7 @@ export const ProjectImage = ({
   const padding = 40;
 
   return (
-    <AspectRatio ratio={16 / 9} style={{ backgroundColor: "var(--blue-1)" }}>
+    <AspectRatio ratio={16 / 9} style={{ backgroundColor: "var(--indigo-1)" }}>
       {image && (
         <Image
           alt={`Illustration for project ${projectName}`}

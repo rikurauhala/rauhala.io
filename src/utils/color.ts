@@ -4,6 +4,6 @@ const getColorVariable = (colorName: string, level: number) => {
 
 export const getBorderGradient = () => {
   const crimson = getColorVariable("crimson", 11);
-  const blue = getColorVariable("blue", 11);
-  return `linear-gradient(45deg, ${crimson}, ${blue})`;
+  const indigo = getColorVariable("indigo", 11);
+  return `linear-gradient(45deg, ${crimson}, ${indigo})`;
 };
