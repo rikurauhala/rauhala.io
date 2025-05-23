@@ -4,14 +4,13 @@ import { notFound } from "next/navigation";
 
 import { SectionWrapper } from "~/components/SectionWrapper";
 import { author } from "~/content/info";
-import { getProjectById, getProjectIds } from "~/utils/projects";
-
-type Params = { id: string };
+import { getProjectById, getProjectIds } from "~/lib/projects";
+import { ProjectId } from "~/types";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<Params>;
+  params: Promise<ProjectId>;
 }): Promise<Metadata> {
   const { id } = await params;
 
@@ -34,7 +33,7 @@ export async function generateStaticParams() {
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<Params>;
+  params: Promise<ProjectId>;
 }) {
   const { id } = await params;
   const project = await getProjectById(id);

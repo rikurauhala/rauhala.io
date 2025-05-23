@@ -3,7 +3,7 @@ import { Flex, Grid } from "@radix-ui/themes";
 import { TextContainer } from "~/components/TextContainer";
 import { projectsSectionContent } from "~/content/projects";
 import { ProjectCard } from "./ProjectCard";
-import { getProjectDetails } from "~/utils/projects";
+import { getProjectDetails } from "~/lib/projects";
 
 export const ProjectsSection = async () => {
   const projects = await getProjectDetails();

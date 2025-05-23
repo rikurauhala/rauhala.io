@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { BASE_URL, BLOG_URL, PROJECTS_URL } from "~/constants";
-import { getProjectIds } from "~/utils/projects";
+import { getProjectIds } from "~/lib/projects";
 
 export const dynamic = "force-static";
 

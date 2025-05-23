@@ -1,14 +1,10 @@
 import { Card, Flex, Heading, Inset, Text } from "@radix-ui/themes";
 import Link from "next/link";
 
-import { Project } from "~/types";
+import { ProjectDetails } from "~/types";
 import { ProjectImage } from "./ProjectImage";
 
-export const ProjectCard = ({
-  project,
-}: {
-  project: Omit<Project, "content" | "repository">;
-}) => {
+export const ProjectCard = ({ project }: { project: ProjectDetails }) => {
   return (
     <Card style={{ display: "flex", flexDirection: "column" }}>
       <Inset clip="padding-box" pb="current" side="top">
