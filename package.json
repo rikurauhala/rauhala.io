@@ -1,6 +1,11 @@
 {
   "name": "rauhala-io",
   "version": "0.1.0",
+  "description": "Personal website of Riku Rauhala",
+  "author": "Riku Rauhala",
+  "homepage": "https://github.com/rikurauhala/rauhala.io",
+  "license": "MIT",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
