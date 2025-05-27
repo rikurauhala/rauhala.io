@@ -1,7 +1,7 @@
-import { Heading, Text } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { MarkdownContainer } from "~/components/MarkdownContainer";
 import { SectionWrapper } from "~/components/SectionWrapper";
 import { author } from "~/content/info";
 import { getProjectById, getProjectIds } from "~/lib/projects";
@@ -44,8 +44,7 @@ export default async function ProjectPage({
 
   return (
     <SectionWrapper>
-      <Heading as="h1">{project.name}</Heading>
-      <Text color="gray">content</Text>
+      <MarkdownContainer content={project.content} />
     </SectionWrapper>
   );
 }
