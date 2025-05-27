@@ -1,4 +1,4 @@
-import { AspectRatio } from "@radix-ui/themes";
+import { AspectRatio, Card, Inset, Text } from "@radix-ui/themes";
 import NextImage from "next/image";
 
 export const Image = ({ alt, src }: { alt?: string; src?: string }) => {
@@ -7,8 +7,15 @@ export const Image = ({ alt, src }: { alt?: string; src?: string }) => {
   }
 
   return (
-    <AspectRatio className="common" ratio={1920 / 1080}>
-      <NextImage alt={alt} fill src={src} />
-    </AspectRatio>
+    <Card className="common">
+      <Inset pb="current" side="top">
+        <AspectRatio ratio={1920 / 1080}>
+          <NextImage alt={alt} fill src={src} />
+        </AspectRatio>
+      </Inset>
+      <Text as="span" color="gray" size="2">
+        {alt}
+      </Text>
+    </Card>
   );
 };
