@@ -7,7 +7,7 @@ export const Image = ({ alt, src }: { alt?: string; src?: string }) => {
   }
 
   return (
-    <AspectRatio asChild className="common" ratio={1920 / 1080}>
+    <AspectRatio className="common" ratio={1920 / 1080}>
       <NextImage alt={alt} fill src={src} />
     </AspectRatio>
   );
