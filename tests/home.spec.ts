@@ -20,6 +20,9 @@ test.describe("Home page", () => {
       const profession = page.getByText("Software Developer").first();
       await expect(profession).toBeVisible();
 
+      const education = page.getByText("B.Sc. in Computer Science");
+      await expect(education).toBeVisible();
+
       const location = page.getByText("Helsinki, Finland");
       await expect(location).toBeVisible();
     });

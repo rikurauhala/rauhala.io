@@ -12,10 +12,13 @@ export const InfoSection = () => {
         {author.name}
       </Heading>
       <Flex align="center" direction="column" gap="1">
-        <Text as="p" size="4" style={{ color: "var(--accent-11)" }}>
+        <Text as="p" color="indigo" size="4">
           {author.profession}
         </Text>
-        <Text as="p" color="gray">
+        <Text as="p" color="crimson" size="3">
+          {author.education}
+        </Text>
+        <Text as="p" color="gray" size="3">
           {author.location}
         </Text>
       </Flex>
