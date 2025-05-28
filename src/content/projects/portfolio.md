@@ -61,6 +61,8 @@ With the new requirements in mind, I decided to go with [Next.js](https://nextjs
 
 This project has been my playground for testing new technologies and tools. For the current version, I also picked up [Playwright](https://playwright.dev) for end-to-end testing, [Qlty](https://qlty.sh) for tracking maintainability issues as well as [Lighthouse](https://developer.chrome.com/docs/lighthouse) for accessibility and performance metrics. All of this is coming nicely together with [GitHub Actions](https://docs.github.com/en/actions) by automating checks and deployments.
 
+Another aspect that is now better being taken into account is keeping dependencies up to date. A lot of effort in maintaining an open source project comes from keeping up with current versions of the project's dependencies. Vulnerable and outdated components are also a common [security issue](https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components). For updating dependencies, [Renovate bot](https://docs.renovatebot.com) is used.
+
 So what's next? As you may have noticed, there is a placeholder "Blog" button in the navigation bar! I am hoping to start writing about my passion for software engineering soon on my very own platform.
 
 ## Summary
