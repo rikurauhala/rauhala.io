@@ -1,8 +1,8 @@
+import { Container, Section } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { MarkdownContainer } from "~/components/MarkdownContainer";
-import { SectionWrapper } from "~/components/SectionWrapper";
 import { author } from "~/content/info";
 import { getProjectById, getProjectIds } from "~/lib/projects";
 import { ProjectId } from "~/types";
@@ -43,8 +43,10 @@ export default async function ProjectPage({
   }
 
   return (
-    <SectionWrapper>
-      <MarkdownContainer content={project.content} />
-    </SectionWrapper>
+    <Section py="5">
+      <Container px="5" size="3">
+        <MarkdownContainer content={project.content} />
+      </Container>
+    </Section>
   );
 }
