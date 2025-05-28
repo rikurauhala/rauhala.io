@@ -1,6 +1,7 @@
 import { Container, Section } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ContributionNotice } from "~/components/ContributionNotice";
 
 import { MarkdownContainer } from "~/components/MarkdownContainer";
 import { author } from "~/content/info";
@@ -46,6 +47,7 @@ export default async function ProjectPage({
     <Section py="5">
       <Container px="5" size="3">
         <MarkdownContainer content={project.content} />
+        <ContributionNotice projectId={id} />
       </Container>
     </Section>
   );
