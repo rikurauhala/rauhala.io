@@ -43,6 +43,7 @@ test.describe("Navigation", () => {
   test("Project page", async ({ page }) => {
     await page.getByRole("link", { name: "Oodikone" }).click();
     await expect(page).toHaveURL("/projects/oodikone");
+    await expect(page).toHaveTitle("Oodikone - Riku Rauhala");
 
     const homeLink = page.getByRole("link", { name: "Home" });
     await expect(homeLink).not.toHaveAttribute("data-active", "");
