@@ -1,7 +1,12 @@
 <h1 align="center">
 
-<img src="docs/img/logo.png" height="96px" width="96px" />
-  
+<img
+  src="docs/img/logo.png"
+  alt="Project logo, a white letter R on a dark indigo background"
+  height="96px"
+  width="96px"
+/>
+
 <a href="https://rauhala.io">rauhala.io</a>
 
 </h1>
