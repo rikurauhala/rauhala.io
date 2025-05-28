@@ -12,6 +12,7 @@
     "start": "next start",
     "serve": "serve out",
     "lint": "next lint",
+    "serve:lhci": "serve out",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
   },
