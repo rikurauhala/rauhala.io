@@ -3,11 +3,10 @@ type Project = {
   name: string;
   image: string;
   description: string;
-  repository: string | null;
   content: string;
 };
 
-export type ProjectDetails = Omit<Project, "content" | "repository">;
+export type ProjectDetails = Omit<Project, "content">;
 
 export type ProjectId = Pick<Project, "id">;
 

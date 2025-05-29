@@ -53,7 +53,6 @@ export const getProjectById = async (
 
   return {
     name: parsed.data.name,
-    repository: parsed.data.repository,
     content: parsed.content,
   };
 };
