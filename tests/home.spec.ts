@@ -124,25 +124,25 @@ test.describe("Home page", () => {
     const sourceCodeLink = page.getByRole("link", { name: "Source code" });
     await expect(sourceCodeLink).toHaveAttribute(
       "href",
-      "https://github.com/rikurauhala/rauhala-io"
+      "https://github.com/rikurauhala/rauhala.io"
     );
 
     const licenseLink = page.getByRole("link", { name: "License" });
     await expect(licenseLink).toHaveAttribute(
       "href",
-      "https://github.com/rikurauhala/rauhala-io/blob/main/LICENSE.md"
+      "https://github.com/rikurauhala/rauhala.io/blob/main/LICENSE.md"
     );
 
     const creditsLink = page.getByRole("link", { name: "Credits" });
     await expect(creditsLink).toHaveAttribute(
       "href",
-      "https://github.com/rikurauhala/rauhala-io/blob/main/docs/credits.md"
+      "https://github.com/rikurauhala/rauhala.io/blob/main/docs/credits.md"
     );
 
     const changelogLink = page.getByRole("link", { name: "Changelog" });
     await expect(changelogLink).toHaveAttribute(
       "href",
-      "https://github.com/rikurauhala/rauhala-io/releases"
+      "https://github.com/rikurauhala/rauhala.io/releases"
     );
 
     const copyright = page.getByText(/© 2025 Riku Rauhala/);
