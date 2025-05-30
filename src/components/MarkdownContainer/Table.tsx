@@ -1,7 +1,7 @@
 import { Table as Table } from "@radix-ui/themes";
 
 export const TableBody = ({ children }: { children?: React.ReactNode }) => {
-  return <Table.Body>{children}</Table.Body>;
+  return <Table.Body tabIndex={0}>{children}</Table.Body>;
 };
 
 export const TableCell = ({
