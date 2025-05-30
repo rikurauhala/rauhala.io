@@ -3,7 +3,12 @@ import { AccessibleIcon, Flex, Link } from "@radix-ui/themes";
 
 export const HyperLink = ({ href, text }: { href: string; text: string }) => {
   return (
-    <Link href={href} rel="noopener noreferrer" target="_blank">
+    <Link
+      href={href}
+      rel="noopener noreferrer"
+      target="_blank"
+      underline="always"
+    >
       <Flex align="center" gap="1">
         {text}
         <AccessibleIcon label="opens in new tab">

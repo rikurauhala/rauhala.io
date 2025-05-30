@@ -11,7 +11,7 @@ export const ContributionNotice = ({ projectId }: { projectId: string }) => {
       <Text color="gray" size="2">
         Did you notice a typo?
       </Text>{" "}
-      <Link href={fileUrl} size="2">
+      <Link href={fileUrl} size="2" underline="always">
         Edit this file on GitHub
       </Link>
     </Section>

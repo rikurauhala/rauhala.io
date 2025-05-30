@@ -7,5 +7,9 @@ export const Link = ({
   children?: React.ReactNode;
   href?: string;
 }) => {
-  return <RadixLink href={href}>{children}</RadixLink>;
+  return (
+    <RadixLink href={href} underline="always">
+      {children}
+    </RadixLink>
+  );
 };

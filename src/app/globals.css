@@ -10,14 +10,6 @@ body {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .radix-themes {
   --default-font-family: var(--font-inter);
 }
