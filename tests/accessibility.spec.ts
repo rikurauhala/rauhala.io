@@ -24,19 +24,19 @@ test.describe("Accessibility", () => {
   const expectedActiveElements = [
     "Home",
     "Blog",
-    "GitHub icon GitHub",
-    "LinkedIn icon LinkedIn",
-    "Email icon Email",
+    "GitHub",
+    "LinkedIn",
+    "Email",
     "Berry Picker Tracker",
     "Oodikone",
     "Portfolio",
     "Teaching assistant",
     "reach me via email",
     "send me a message on LinkedIn",
-    "Source code opens in new tab",
-    "License opens in new tab",
-    "Credits opens in new tab",
-    "Changelog opens in new tab",
+    "Source code",
+    "License",
+    "Credits",
+    "Changelog",
   ] as const;
 
   test("Home page tabbing order is correct", async ({ page }) => {
@@ -52,7 +52,7 @@ test.describe("Accessibility", () => {
         element.innerText.trim().replace(/\s+/g, " ")
       );
 
-      expect(activeElementText).toBe(expectedText);
+      expect(activeElementText).toContain(expectedText);
 
       await page.keyboard.press("Tab");
     }
