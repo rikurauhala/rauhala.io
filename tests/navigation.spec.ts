@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test.describe("Navigation", () => {
   test.beforeEach(async ({ page }) => {
@@ -55,7 +55,7 @@ test.describe("Navigation", () => {
   });
 
   test("Not found page", async ({ page }) => {
-    await page.goto("/this-page-does-not-exist");
+    await page.goto("/not-found");
     await expect(page).toHaveTitle("Not found - Riku Rauhala");
 
     const notFoundText = page.getByRole("heading", { name: "Not found" });
