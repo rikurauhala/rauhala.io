@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/NavBar";
-import { TOP_BAR_HEIGHT } from "~/constants";
+import { BASE_URL, TOP_BAR_HEIGHT } from "~/constants";
 import { author, description } from "~/content/info";
 import { inter } from "~/utils/fonts";
 import "~/utils/radix";
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   description,
   generator: "Next.js",
+  metadataBase: new URL(BASE_URL),
 };
 
 export const viewport: Viewport = {
