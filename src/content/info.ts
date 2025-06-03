@@ -10,3 +10,5 @@ export const contact = {
   gitHub: "https://github.com/rikurauhala",
   linkedIn: "https://linkedin.com/in/rikurauhala",
 } as const;
+
+export const description = `${author.profession} from ${author.location}`;

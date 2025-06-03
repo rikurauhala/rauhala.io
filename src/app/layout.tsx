@@ -4,7 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/NavBar";
 import { TOP_BAR_HEIGHT } from "~/constants";
-import { author } from "~/content/info";
+import { author, description } from "~/content/info";
 import { inter } from "~/utils/fonts";
 import "~/utils/radix";
 import "./globals.css";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s - ${author.name}`,
     default: author.name,
   },
-  description: `${author.profession} from ${author.location}`,
+  description,
   generator: "Next.js",
 };
 
