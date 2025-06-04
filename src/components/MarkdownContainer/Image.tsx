@@ -9,7 +9,7 @@ export const Image = ({ alt, src }: { alt?: string; src?: string }) => {
   return (
     <Card className="common">
       <Inset pb="current" side="top">
-        <AspectRatio ratio={1920 / 1080}>
+        <AspectRatio ratio={16 / 9}>
           <NextImage alt={alt} fill src={src} />
         </AspectRatio>
       </Inset>
