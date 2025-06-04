@@ -22,8 +22,8 @@ export default async function Image() {
           width: "100%",
         }}
       >
-        <div style={{ fontSize: 64 }}>{author.name}</div>
-        <div style={{ color: "gray", fontSize: 32 }}>{description}</div>
+        <div style={{ fontSize: 96 }}>{author.name}</div>
+        <div style={{ color: "gray", fontSize: 48 }}>{description}</div>
       </div>
     )
   );
