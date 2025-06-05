@@ -12,7 +12,7 @@ export default async function Image() {
       <div
         style={{
           alignItems: "center",
-          backgroundImage: "linear-gradient(to right, #11131F, #191114)",
+          backgroundImage: "linear-gradient(to right, #141726, #201318)",
           color: "#fff",
           display: "flex",
           flexDirection: "column",
