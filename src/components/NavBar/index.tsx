@@ -2,6 +2,7 @@ import { Container, Flex, TabNav } from "@radix-ui/themes";
 
 import { TOP_BAR_HEIGHT } from "~/constants";
 import { NavigationLink } from "./NavigationLink";
+import { UnderConstructionBadge } from "./UnderConstructionBadge";
 
 export const NavBar = () => {
   return (
@@ -14,11 +15,12 @@ export const NavBar = () => {
         justifyContent: "center",
       }}
     >
-      <Flex align="center" gap="3">
+      <Flex align="center" justify="between" gap="3">
         <TabNav.Root>
           <NavigationLink href="/" text="Home" />
           <NavigationLink href="/blog" text="Blog" />
         </TabNav.Root>
+        <UnderConstructionBadge />
       </Flex>
     </Container>
   );
