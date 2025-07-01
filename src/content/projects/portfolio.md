@@ -2,6 +2,7 @@
 name: "Portfolio"
 image: "programming"
 description: "How I kept outgrowing my portfolio"
+modified: "2025-05-29"
 ---
 
 # Portfolio
