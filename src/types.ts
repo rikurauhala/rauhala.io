@@ -4,10 +4,11 @@ type Project = {
   image: string;
   description: string;
   content: string;
+  lastModified: Date;
 };
 
-export type ProjectDetails = Omit<Project, "content">;
+export type ProjectDetails = Omit<Project, "content" | "lastModified">;
 
 export type ProjectId = Pick<Project, "id">;
 
-export type ProjectContent = Omit<Project, "id" | "image" | "description">;
+export type ProjectContent = Pick<Project, "name" | "content" | "lastModified">;

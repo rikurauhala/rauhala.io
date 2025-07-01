@@ -1,8 +1,9 @@
-import { Container, Section } from "@radix-ui/themes";
+import { Container, Flex, Section } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ContributionNotice } from "~/components/ContributionNotice";
 
+import { ContributionNotice } from "~/components/ContributionNotice";
+import { LastModified } from "~/components/LastModified";
 import { MarkdownContainer } from "~/components/MarkdownContainer";
 import { author } from "~/content/info";
 import { getProjectById, getProjectIds } from "~/lib/projects";
@@ -46,8 +47,11 @@ export default async function ProjectPage({
   return (
     <Section py="5">
       <Container px="5" size="3">
-        <MarkdownContainer content={project.content} />
-        <ContributionNotice projectId={id} />
+        <Flex direction="column" gap="4">
+          <LastModified date={project.lastModified} />
+          <MarkdownContainer content={project.content} />
+          <ContributionNotice projectId={id} />
+        </Flex>
       </Container>
     </Section>
   );

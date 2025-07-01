@@ -1,3 +1,4 @@
+import { Box } from "@radix-ui/themes";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -19,24 +20,26 @@ import "./style.css";
 
 export const MarkdownContainer = ({ content }: { content: string }) => {
   return (
-    <ReactMarkdown
-      components={{
-        a: Link,
-        code: Code,
-        h1: Heading1,
-        h2: Heading2,
-        img: Image,
-        p: Paragraph,
-        table: TableRoot,
-        tbody: TableBody,
-        td: TableCell,
-        th: TableHeaderCell,
-        thead: TableHeader,
-        tr: TableRow,
-      }}
-      remarkPlugins={[remarkGfm]}
-    >
-      {content}
-    </ReactMarkdown>
+    <Box>
+      <ReactMarkdown
+        components={{
+          a: Link,
+          code: Code,
+          h1: Heading1,
+          h2: Heading2,
+          img: Image,
+          p: Paragraph,
+          table: TableRoot,
+          tbody: TableBody,
+          td: TableCell,
+          th: TableHeaderCell,
+          thead: TableHeader,
+          tr: TableRow,
+        }}
+        remarkPlugins={[remarkGfm]}
+      >
+        {content}
+      </ReactMarkdown>
+    </Box>
   );
 };

@@ -9,6 +9,13 @@ test.describe("Project page", () => {
     await expect(page).toHaveTitle("Portfolio - Riku Rauhala");
   });
 
+  test("has last modified date", async ({ page }) => {
+    const lastModifiedText = page.getByText("Last modified on");
+    const lastModifiedYear = "2025";
+    await expect(lastModifiedText).toBeVisible();
+    await expect(lastModifiedText).toContainText(lastModifiedYear);
+  });
+
   test("has correct project name", async ({ page }) => {
     const projectName = page.getByRole("heading", { name: "Portfolio" });
     await expect(projectName).toBeVisible();
