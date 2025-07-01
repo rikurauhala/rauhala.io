@@ -2,7 +2,12 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-import { ProjectContent, ProjectDetails, ProjectId } from "~/types";
+import {
+  ProjectContent,
+  ProjectDetails,
+  ProjectMetadata,
+  ProjectId,
+} from "~/types";
 
 const projectsDir = path.join(process.cwd(), "src", "content", "projects");
 
@@ -15,6 +20,25 @@ export const getProjectIds = async (): Promise<ProjectId[]> => {
       };
     })
   );
+  return projects;
+};
+
+export const getProjectMetadata = async (): Promise<ProjectMetadata[]> => {
+  const projectFiles = fs.readdirSync(projectsDir);
+
+  const projects = await Promise.all(
+    projectFiles.map(async (file) => {
+      const filePath = path.join(projectsDir, file);
+      const fileContent = fs.readFileSync(filePath, "utf8");
+      const parsed = matter(fileContent);
+
+      return {
+        id: file.replace(".md", ""),
+        lastModified: parsed.data.modified || new Date().toISOString(),
+      };
+    })
+  );
+
   return projects;
 };
 

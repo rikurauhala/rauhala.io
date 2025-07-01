@@ -11,4 +11,6 @@ export type ProjectDetails = Omit<Project, "content" | "lastModified">;
 
 export type ProjectId = Pick<Project, "id">;
 
+export type ProjectMetadata = Pick<Project, "id" | "lastModified">;
+
 export type ProjectContent = Pick<Project, "name" | "content" | "lastModified">;
