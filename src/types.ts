@@ -4,7 +4,7 @@ type Project = {
   image: string;
   description: string;
   content: string;
-  lastModified: Date;
+  lastModified: string;
 };
 
 export type ProjectDetails = Omit<Project, "content" | "lastModified">;

@@ -1,9 +1,9 @@
 import { Text } from "@radix-ui/themes";
 
-export const LastModified = ({ date }: { date: Date }) => {
-  const formattedDate = date.toLocaleDateString("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
+export const LastModified = ({ date }: { date: string }) => {
+  const formattedDate = new Date(date).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
     year: "numeric",
   });
 

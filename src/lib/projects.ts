@@ -48,13 +48,12 @@ export const getProjectById = async (
     return null;
   }
 
-  const fileStats = fs.statSync(filePath);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const parsed = matter(fileContent);
 
   return {
     name: parsed.data.name,
     content: parsed.content,
-    lastModified: fileStats.mtime,
+    lastModified: parsed.data.modified || new Date().toISOString(),
   };
 };
