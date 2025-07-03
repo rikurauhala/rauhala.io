@@ -35,6 +35,7 @@ export const getProjectMetadata = async (): Promise<ProjectMetadata[]> => {
       return {
         id: file.replace(".md", ""),
         lastModified: parsed.data.modified || new Date().toISOString(),
+        draft: parsed.data.draft || false,
       };
     })
   );
@@ -56,6 +57,7 @@ export const getProjectDetails = async (): Promise<ProjectDetails[]> => {
         name: parsed.data.name,
         image: parsed.data.image,
         description: parsed.data.description,
+        draft: parsed.data.draft || false,
       };
     })
   );
