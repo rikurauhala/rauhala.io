@@ -23,16 +23,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  projects.forEach((project) => {
-    paths.push({
-      url: `${PROJECTS_URL}/${project.id}`,
-      lastModified: project.lastModified
-        ? new Date(project.lastModified)
-        : new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+  projects
+    .filter((project) => !project.draft)
+    .forEach((project) => {
+      paths.push({
+        url: `${PROJECTS_URL}/${project.id}`,
+        lastModified: project.lastModified
+          ? new Date(project.lastModified)
+          : new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+      });
     });
-  });
 
   return paths;
 }

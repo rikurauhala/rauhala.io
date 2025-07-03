@@ -12,9 +12,10 @@ export const ProjectsSection = async () => {
     <Flex direction="column" gap="4">
       <TextContainer content={projectsSectionContent} />
       <Grid columns={{ initial: "1", sm: "2" }} gap="4">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {projects.map(
+          (project) =>
+            !project.draft && <ProjectCard key={project.id} project={project} />
+        )}
       </Grid>
     </Flex>
   );

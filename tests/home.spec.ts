@@ -94,9 +94,9 @@ test.describe("Home page", () => {
     test("Project cards", async ({ page }) => {
       const projects = [
         "Oodikone",
-        "Berry Picker Tracker",
+        // ! "Berry Picker Tracker",
         "Portfolio",
-        "Teaching assistant",
+        // ! "Teaching assistant",
       ];
 
       for (const project of projects) {
