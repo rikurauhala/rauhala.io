@@ -1,8 +1,11 @@
 import { AspectRatio, Card, Inset, Text } from "@radix-ui/themes";
 import NextImage from "next/image";
+import type { ImgHTMLAttributes } from "react";
 
-export const Image = ({ alt, src }: { alt?: string; src?: string }) => {
-  if (!alt || !src) {
+export const Image = (props: ImgHTMLAttributes<HTMLImageElement>) => {
+  const { alt, src } = props;
+
+  if (!alt || !src || typeof src !== "string") {
     return null;
   }
 
