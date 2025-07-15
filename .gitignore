@@ -7,8 +7,8 @@
 /.vercel
 
 # Next.js
-/.next/
-/out/
+/.next
+/out
 
 # Debug
 npm-debug.log*
@@ -17,7 +17,7 @@ npm-debug.log*
 .env*
 
 # VS Code
-.vscode/sessions.json
+/.vscode
 
 # TypeScript
 *.tsbuildinfo
@@ -31,5 +31,5 @@ next-env.d.ts
 /tests-examples
 
 # Qlty
-/.qlty/
+/.qlty
 !/.qlty/qlty.toml
