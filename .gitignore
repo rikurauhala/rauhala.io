@@ -16,6 +16,9 @@ npm-debug.log*
 # Env files
 .env*
 
+# VS Code
+.vscode/sessions.json
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
