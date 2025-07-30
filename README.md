@@ -17,8 +17,6 @@
 [![Radix UI](https://img.shields.io/badge/radix%20ui-161618.svg?style=for-the-badge&logo=radix-ui&logoColor=white)](https://www.radix-ui.com)
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
-[![Maintainability](https://qlty.sh/badges/ace7aff0-874f-4517-9612-95af4ea69c52/maintainability.svg)](https://qlty.sh/gh/rikurauhala/projects/rauhala.io)
-
 </div>
 
 ## About
