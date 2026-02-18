@@ -1,5 +1,5 @@
 import { Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog",

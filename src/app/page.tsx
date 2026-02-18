@@ -18,7 +18,11 @@ export default function Home() {
   return (
     <Flex direction="column">
       {sections.map(({ component: Component, key, title }, index) => (
-        <SectionWrapper darkBackground={index % 2 == 0} key={key} title={title}>
+        <SectionWrapper
+          darkBackground={index % 2 === 0}
+          key={key}
+          title={title}
+        >
           <Component />
         </SectionWrapper>
       ))}
