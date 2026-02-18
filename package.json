@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "serve": "serve out",
-    "lint": "next lint",
+    "lint": "eslint .",
     "serve:lhci": "serve out",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.52.0",
     "@types/node": "^24.0.0",
     "@types/react": "^19",
