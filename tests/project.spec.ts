@@ -30,7 +30,7 @@ test.describe("Project page", () => {
     await expect(contributionNoticeLink).toBeVisible();
     await expect(contributionNoticeLink).toHaveAttribute(
       "href",
-      expect.stringContaining("src/content/projects/portfolio.md")
+      expect.stringContaining("src/content/projects/portfolio.md"),
     );
   });
 });

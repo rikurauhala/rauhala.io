@@ -1,12 +1,12 @@
-import fs from "fs";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
-import path from "path";
 
-import {
+import type {
   ProjectContent,
   ProjectDetails,
-  ProjectMetadata,
   ProjectId,
+  ProjectMetadata,
 } from "~/types";
 
 const projectsDir = path.join(process.cwd(), "src", "content", "projects");
@@ -18,7 +18,7 @@ export const getProjectIds = async (): Promise<ProjectId[]> => {
       return {
         id: file.replace(".md", ""),
       };
-    })
+    }),
   );
   return projects;
 };
@@ -37,7 +37,7 @@ export const getProjectMetadata = async (): Promise<ProjectMetadata[]> => {
         lastModified: parsed.data.modified || new Date().toISOString(),
         draft: parsed.data.draft || false,
       };
-    })
+    }),
   );
 
   return projects;
@@ -59,14 +59,14 @@ export const getProjectDetails = async (): Promise<ProjectDetails[]> => {
         description: parsed.data.description,
         draft: parsed.data.draft || false,
       };
-    })
+    }),
   );
 
   return projects;
 };
 
 export const getProjectById = async (
-  id: string
+  id: string,
 ): Promise<ProjectContent | null> => {
   const filePath = path.join(projectsDir, `${id}.md`);
 

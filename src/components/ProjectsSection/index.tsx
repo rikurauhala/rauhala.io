@@ -2,8 +2,8 @@ import { Flex, Grid } from "@radix-ui/themes";
 
 import { TextContainer } from "~/components/TextContainer";
 import { projectsSectionContent } from "~/content/projects";
-import { ProjectCard } from "./ProjectCard";
 import { getProjectDetails } from "~/lib/projects";
+import { ProjectCard } from "./ProjectCard";
 
 export const ProjectsSection = async () => {
   const projects = await getProjectDetails();
@@ -14,7 +14,9 @@ export const ProjectsSection = async () => {
       <Grid columns={{ initial: "1", sm: "2" }} gap="4">
         {projects.map(
           (project) =>
-            !project.draft && <ProjectCard key={project.id} project={project} />
+            !project.draft && (
+              <ProjectCard key={project.id} project={project} />
+            ),
         )}
       </Grid>
     </Flex>

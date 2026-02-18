@@ -1,7 +1,7 @@
 import { Card, Flex, Heading, Inset, Text } from "@radix-ui/themes";
 import Link from "next/link";
 
-import { ProjectDetails } from "~/types";
+import type { ProjectDetails } from "~/types";
 import { ProjectImage } from "./ProjectImage";
 
 export const ProjectCard = ({ project }: { project: ProjectDetails }) => {

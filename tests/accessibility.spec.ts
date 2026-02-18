@@ -46,10 +46,10 @@ test.describe("Accessibility", () => {
 
     for (const expectedText of expectedActiveElements) {
       const activeElement = await page.evaluateHandle(
-        () => document.activeElement as HTMLElement
+        () => document.activeElement as HTMLElement,
       );
       const activeElementText = await activeElement.evaluate((element) =>
-        element.innerText.trim().replace(/\s+/g, " ")
+        element.innerText.trim().replace(/\s+/g, " "),
       );
 
       expect(activeElementText).toContain(expectedText);

@@ -7,7 +7,7 @@ import { LastModified } from "~/components/LastModified";
 import { MarkdownContainer } from "~/components/MarkdownContainer";
 import { author } from "~/content/info";
 import { getProjectById, getProjectIds } from "~/lib/projects";
-import { ProjectId } from "~/types";
+import type { ProjectId } from "~/types";
 
 export async function generateMetadata({
   params,
