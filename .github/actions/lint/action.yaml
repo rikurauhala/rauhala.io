@@ -1,5 +1,5 @@
 name: Linting
-description: Enforce code style and quality using ESLint
+description: Enforce code style and quality using Biome
 
 runs:
   using: "composite"
