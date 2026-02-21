@@ -80,7 +80,7 @@ test.describe("Home page", () => {
 
   test("About section", async ({ page }) => {
     await expect(page.getByRole("heading", { name: "About" })).toBeVisible();
-    await expect(page.getByText("Hi there!")).toBeVisible();
+    await expect(page.getByText("Hello there!")).toBeVisible();
   });
 
   test.describe("Project section", () => {
