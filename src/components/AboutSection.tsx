@@ -1,6 +1,7 @@
 import { TextContainer } from "~/components/TextContainer";
-import { aboutSectionContent } from "~/content/about";
+import { getContentFromFile } from "~/lib/markdown";
 
-export const AboutSection = () => {
-  return <TextContainer content={aboutSectionContent} />;
+export const AboutSection = async () => {
+  const content = await getContentFromFile("about");
+  return <TextContainer content={content} />;
 };
