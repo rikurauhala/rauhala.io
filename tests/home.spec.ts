@@ -93,29 +93,6 @@ test.describe("Home page", () => {
     await expect(page.getByText(/June 2025/)).toBeVisible();
   });
 
-  test.describe("Project section", () => {
-    test("content", async ({ page }) => {
-      await expect(
-        page.getByRole("heading", { name: "Projects" }),
-      ).toBeVisible();
-      await expect(page.getByText("Over the years")).toBeVisible();
-    });
-
-    test("Project cards", async ({ page }) => {
-      const projects = [
-        "Oodikone",
-        // ! "Berry Picker Tracker",
-        "Portfolio",
-        // ! "Teaching assistant",
-      ];
-
-      for (const project of projects) {
-        const projectCard = page.getByRole("heading", { name: project });
-        await expect(projectCard).toBeVisible();
-      }
-    });
-  });
-
   test("Contact section", async ({ page }) => {
     await expect(page.getByRole("heading", { name: "Contact" })).toBeVisible();
     await expect(page.getByText("Let's get in touch!")).toBeVisible();

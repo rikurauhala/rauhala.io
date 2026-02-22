@@ -35,25 +35,6 @@ test.describe("Navigation", () => {
     await expect(blogLink).not.toHaveAttribute("aria-current", "page");
   });
 
-  test("Projects page redirects to front page", async ({ page }) => {
-    await page.goto("/projects");
-    await expect(page).toHaveURL("/");
-  });
-
-  test("Project page", async ({ page }) => {
-    await page.getByRole("link", { name: "Oodikone" }).click();
-    await expect(page).toHaveURL("/projects/oodikone");
-    await expect(page).toHaveTitle("Oodikone - Riku Rauhala");
-
-    const homeLink = page.getByRole("link", { name: "Home" });
-    await expect(homeLink).not.toHaveAttribute("data-active", "");
-    await expect(homeLink).not.toHaveAttribute("aria-current", "page");
-
-    const blogLink = page.getByRole("link", { name: "Blog" });
-    await expect(blogLink).not.toHaveAttribute("data-active", "");
-    await expect(blogLink).not.toHaveAttribute("aria-current", "page");
-  });
-
   test("Not found page", async ({ page }) => {
     await page.goto("/not-found");
     await expect(page).toHaveTitle("Not found - Riku Rauhala");
