@@ -83,6 +83,16 @@ test.describe("Home page", () => {
     await expect(page.getByText("Hello there!")).toBeVisible();
   });
 
+  test("Career section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Career" })).toBeVisible();
+    await expect(
+      page.getByText("A brief overview of my recent career."),
+    ).toBeVisible();
+
+    await expect(page.getByText(/Taito United/)).toBeVisible();
+    await expect(page.getByText(/June 2025/)).toBeVisible();
+  });
+
   test.describe("Project section", () => {
     test("content", async ({ page }) => {
       await expect(
