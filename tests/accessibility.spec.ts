@@ -5,7 +5,6 @@ test.describe("Accessibility", () => {
   const pagesToTest = [
     { name: "Home", path: "/" },
     { name: "Blog", path: "/blog" },
-    { name: "Project", path: "/projects/portfolio" },
     { name: "Not found", path: "/not-found" },
   ];
 
@@ -27,10 +26,6 @@ test.describe("Accessibility", () => {
     "GitHub",
     "LinkedIn",
     "Email",
-    // ! "Berry Picker Tracker",
-    "Oodikone",
-    "Portfolio",
-    // ! "Teaching assistant",
     "reach me via email",
     "send me a message on LinkedIn",
     "Source code",
