@@ -13,7 +13,9 @@ export const SectionWrapper = ({
     <Section
       py="8"
       style={{
-        backgroundColor: darkBackground ? "var(--gray-1)" : "var(--gray-2)",
+        backgroundColor: darkBackground
+          ? "rgba(0, 0, 0, 0.55)"
+          : "rgba(0, 0, 0, 0.35)",
       }}
     >
       <Container px="5" size="3">

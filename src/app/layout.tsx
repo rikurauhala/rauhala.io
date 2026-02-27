@@ -41,7 +41,7 @@ export default function RootLayout({
           appearance="dark"
           grayColor="slate"
           style={{
-            backgroundColor: "var(--gray-2)",
+            backgroundColor: "transparent",
             display: "flex",
             flexDirection: "column",
             minHeight: "100vh",
