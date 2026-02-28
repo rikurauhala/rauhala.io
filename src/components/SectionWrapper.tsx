@@ -20,7 +20,7 @@ export const SectionWrapper = ({
     >
       <Container px="5" size="3">
         {title && (
-          <Heading as="h2" size="6">
+          <Heading as="h2" size="6" mb="3">
             {title}
           </Heading>
         )}
