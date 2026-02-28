@@ -85,12 +85,35 @@ test.describe("Home page", () => {
 
   test("Career section", async ({ page }) => {
     await expect(page.getByRole("heading", { name: "Career" })).toBeVisible();
-    await expect(
-      page.getByText("A brief overview of my recent career."),
-    ).toBeVisible();
 
     await expect(page.getByText(/Taito United/)).toBeVisible();
     await expect(page.getByText(/June 2025/)).toBeVisible();
+  });
+
+  test("Education section", async ({ page }) => {
+    await expect(
+      page.getByRole("heading", { name: "Education" }),
+    ).toBeVisible();
+
+    await expect(
+      page.getByText("Master of Science in Computer Science"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("University of Helsinki • January 2024 – Present"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("Currently pursuing my master's degree"),
+    ).toBeVisible();
+
+    await expect(
+      page.getByText("Bachelor of Science in Computer Science"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("University of Helsinki • September 2020 – January 2024"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("Completed my bachelor's degree in computer science"),
+    ).toBeVisible();
   });
 
   test("Contact section", async ({ page }) => {
