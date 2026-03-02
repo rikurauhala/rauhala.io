@@ -4,6 +4,7 @@ export type Position = {
   organisation: string;
   startTime: string;
   endTime: string | null;
+  description: string;
 };
 
 export type Degree = {

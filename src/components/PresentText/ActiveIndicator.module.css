@@ -1,0 +1,20 @@
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--green-9);
+  animation: blink 2s ease-in-out infinite;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}

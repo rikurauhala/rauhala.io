@@ -2,6 +2,7 @@ import { Flex, Heading, Separator, Text } from "@radix-ui/themes";
 
 import { degrees } from "~/content/education";
 import { formatMonthYear } from "~/utils/date";
+import { PresentText } from "./PresentText";
 import { TextContainer } from "./TextContainer";
 
 export const EducationSection = () => {
@@ -20,7 +21,11 @@ export const EducationSection = () => {
             <Text color="gray" size="2">
               {degree.institution} &bull; {formatMonthYear(degree.startTime)}{" "}
               &ndash;{" "}
-              {degree.endTime ? formatMonthYear(degree.endTime) : "Present"}
+              {degree.endTime ? (
+                formatMonthYear(degree.endTime)
+              ) : (
+                <PresentText />
+              )}
             </Text>
           </Flex>
           <TextContainer content={degree.description} />

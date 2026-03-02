@@ -7,6 +7,7 @@ export const positions: Position[] = [
     organisation: "Taito United",
     startTime: "2025-06",
     endTime: null,
+    description: "",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const positions: Position[] = [
     organisation: "University of Helsinki",
     startTime: "2025-05",
     endTime: "2025-07",
+    description: "",
   },
   {
     id: 1,
@@ -21,5 +23,6 @@ export const positions: Position[] = [
     organisation: "University of Helsinki",
     startTime: "2024-01",
     endTime: "2025-04",
+    description: "",
   },
 ];
