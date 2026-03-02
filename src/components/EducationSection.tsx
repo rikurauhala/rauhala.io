@@ -18,15 +18,22 @@ export const EducationSection = () => {
             <Heading as="h3" size="4">
               {degree.name}
             </Heading>
-            <Text color="gray" size="2">
-              {degree.institution} &bull; {formatMonthYear(degree.startTime)}{" "}
-              &ndash;{" "}
-              {degree.endTime ? (
-                formatMonthYear(degree.endTime)
-              ) : (
-                <PresentText />
-              )}
-            </Text>
+            <Flex align="center" direction="row" gap="2">
+              <Text color="gray" size="2">
+                {degree.institution}
+              </Text>
+              <Text color="gray" size="2">
+                &#47;
+              </Text>
+              <Text color="gray" size="2">
+                {formatMonthYear(degree.startTime)} &ndash;{" "}
+                {degree.endTime ? (
+                  formatMonthYear(degree.endTime)
+                ) : (
+                  <PresentText />
+                )}
+              </Text>
+            </Flex>
           </Flex>
           <TextContainer content={degree.description} />
           {index < sortedDegrees.length - 1 && <Separator my="3" size="4" />}

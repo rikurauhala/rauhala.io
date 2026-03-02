@@ -87,15 +87,17 @@ test.describe("Home page", () => {
     await expect(page.getByRole("heading", { name: "Career" })).toBeVisible();
 
     await expect(
-      page.getByText("Taito United • June 2025 – Present"),
-    ).toBeVisible();
+      page.getByRole("link", { name: "Taito United" }),
+    ).toHaveAttribute("href", "https://www.taitounited.fi");
+    await expect(page.getByText("June 2025 – Present")).toBeVisible();
     await expect(
       page.getByText("Currently employed as a consultant at Taito United"),
     ).toBeVisible();
 
     await expect(
-      page.getByText("University of Helsinki • May 2025 – July 2025"),
-    ).toBeVisible();
+      page.getByRole("link", { name: "AgentFormers (University of Helsinki)" }),
+    ).toHaveAttribute("href", "https://agentformers.fi/");
+    await expect(page.getByText("May 2025 – July 2025")).toBeVisible();
     await expect(
       page.getByText(
         "Participated in a new research to business project AgentFormers",
@@ -103,8 +105,9 @@ test.describe("Home page", () => {
     ).toBeVisible();
 
     await expect(
-      page.getByText("University of Helsinki • January 2024 – April 2025"),
-    ).toBeVisible();
+      page.getByRole("link", { name: "Toska (University of Helsinki)" }),
+    ).toHaveAttribute("href", "https://toska.dev");
+    await expect(page.getByText("January 2024 – April 2025")).toBeVisible();
     await expect(
       page.getByText(
         "Worked as a software developer in the Toska software development team",
@@ -120,9 +123,7 @@ test.describe("Home page", () => {
     await expect(
       page.getByText("Master of Science in Computer Science"),
     ).toBeVisible();
-    await expect(
-      page.getByText("University of Helsinki • January 2024 – Present"),
-    ).toBeVisible();
+    await expect(page.getByText("January 2024 – Present")).toBeVisible();
     await expect(
       page.getByText("Currently pursuing my master's degree"),
     ).toBeVisible();
@@ -130,9 +131,7 @@ test.describe("Home page", () => {
     await expect(
       page.getByText("Bachelor of Science in Computer Science"),
     ).toBeVisible();
-    await expect(
-      page.getByText("University of Helsinki • September 2020 – January 2024"),
-    ).toBeVisible();
+    await expect(page.getByText("September 2020 – January 2024")).toBeVisible();
     await expect(
       page.getByText("Completed my bachelor's degree in computer science"),
     ).toBeVisible();
