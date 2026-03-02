@@ -1,7 +1,12 @@
+type Organisation = {
+  name: string;
+  url: string;
+};
+
 export type Position = {
   id: string;
   title: string;
-  organisation: string;
+  organisation: Organisation;
   startTime: string;
   endTime: string | null;
   description: string;

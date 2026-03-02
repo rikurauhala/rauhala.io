@@ -4,7 +4,10 @@ export const positions: readonly Position[] = [
   {
     id: "taito-united",
     title: "Software Developer",
-    organisation: "Taito United",
+    organisation: {
+      name: "Taito United",
+      url: "https://www.taitounited.fi",
+    },
     startTime: "2025-06",
     endTime: null,
     description: `
@@ -18,7 +21,10 @@ export const positions: readonly Position[] = [
   {
     id: "agentformers",
     title: "Software Developer",
-    organisation: "University of Helsinki",
+    organisation: {
+      name: "AgentFormers (University of Helsinki)",
+      url: "https://agentformers.fi/",
+    },
     startTime: "2025-05",
     endTime: "2025-07",
     description: `
@@ -39,7 +45,10 @@ export const positions: readonly Position[] = [
   {
     id: "toska",
     title: "Software Developer",
-    organisation: "University of Helsinki",
+    organisation: {
+      name: "Toska (University of Helsinki)",
+      url: "https://toska.dev",
+    },
     startTime: "2024-01",
     endTime: "2025-04",
     description: `
