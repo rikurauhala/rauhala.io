@@ -155,7 +155,7 @@ test.describe("Home page", () => {
       "https://github.com/rikurauhala/rauhala.io/releases",
     );
 
-    const copyright = page.getByText(/© 2025 Riku Rauhala/);
+    const copyright = page.getByText(/© 2026 Riku Rauhala/);
     await expect(copyright).toBeVisible();
 
     const version = page.getByText(/Version \d+\.\d+\.\d+/);
