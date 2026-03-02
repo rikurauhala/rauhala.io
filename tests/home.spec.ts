@@ -86,8 +86,30 @@ test.describe("Home page", () => {
   test("Career section", async ({ page }) => {
     await expect(page.getByRole("heading", { name: "Career" })).toBeVisible();
 
-    await expect(page.getByText(/Taito United/)).toBeVisible();
-    await expect(page.getByText(/June 2025/)).toBeVisible();
+    await expect(
+      page.getByText("Taito United • June 2025 – Present"),
+    ).toBeVisible();
+    await expect(
+      page.getByText("Currently employed as a consultant at Taito United"),
+    ).toBeVisible();
+
+    await expect(
+      page.getByText("University of Helsinki • May 2025 – July 2025"),
+    ).toBeVisible();
+    await expect(
+      page.getByText(
+        "Participated in a new research to business project AgentFormers",
+      ),
+    ).toBeVisible();
+
+    await expect(
+      page.getByText("University of Helsinki • January 2024 – April 2025"),
+    ).toBeVisible();
+    await expect(
+      page.getByText(
+        "Worked as a software developer in the Toska software development team",
+      ),
+    ).toBeVisible();
   });
 
   test("Education section", async ({ page }) => {

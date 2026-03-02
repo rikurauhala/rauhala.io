@@ -1,5 +1,5 @@
 export type Position = {
-  id: number;
+  id: string;
   title: string;
   organisation: string;
   startTime: string;
@@ -8,7 +8,7 @@ export type Position = {
 };
 
 export type Degree = {
-  id: number;
+  id: string;
   name: string;
   institution: string;
   startTime: string;
