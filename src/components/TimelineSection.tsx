@@ -1,4 +1,4 @@
-import { Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
+import { Box, Flex, Heading, Link, Separator, Text } from "@radix-ui/themes";
 
 import { formatMonthYear } from "~/utils/date";
 import { PresentText } from "./PresentText";
@@ -31,7 +31,11 @@ export const TimelineSection = ({ items }: TimelineSectionProps) => {
             <Heading as="h3" size="4">
               {item.title}
             </Heading>
-            <Flex align="center" direction="row" gap="2">
+            <Flex
+              align={{ initial: "start", sm: "center" }}
+              direction={{ initial: "column", sm: "row" }}
+              gap={{ initial: "1", sm: "2" }}
+            >
               {item.subtitleUrl ? (
                 <Link href={item.subtitleUrl} size="2">
                   {item.subtitle}
@@ -41,9 +45,11 @@ export const TimelineSection = ({ items }: TimelineSectionProps) => {
                   {item.subtitle}
                 </Text>
               )}
-              <Text color="gray" size="2">
-                &#47;
-              </Text>
+              <Box display={{ initial: "none", sm: "block" }}>
+                <Text color="gray" size="2">
+                  &#47;
+                </Text>
+              </Box>
               <Text color="gray" size="2">
                 {formatMonthYear(item.startTime)} &ndash;{" "}
                 {item.endTime ? formatMonthYear(item.endTime) : <PresentText />}
