@@ -1,7 +1,7 @@
 export const author = {
   name: "Riku Rauhala",
   profession: "Software Developer",
-  education: "B.Sc. in Computer Science",
+  education: "M.Sc. in Computer Science",
   location: "Helsinki, Finland",
 } as const;
 

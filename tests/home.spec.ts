@@ -20,7 +20,7 @@ test.describe("Home page", () => {
       const profession = page.getByText("Software Developer").first();
       await expect(profession).toBeVisible();
 
-      const education = page.getByText("B.Sc. in Computer Science");
+      const education = page.getByText("M.Sc. in Computer Science");
       await expect(education).toBeVisible();
 
       const location = page.getByText("Helsinki, Finland");
@@ -123,18 +123,14 @@ test.describe("Home page", () => {
     await expect(
       page.getByText("Master of Science in Computer Science"),
     ).toBeVisible();
-    await expect(page.getByText("January 2024 – Present")).toBeVisible();
-    await expect(
-      page.getByText("Currently pursuing my master's degree"),
-    ).toBeVisible();
+    await expect(page.getByText("January 2024 – May 2026")).toBeVisible();
+    await expect(page.getByText("Completed my master's")).toBeVisible();
 
     await expect(
       page.getByText("Bachelor of Science in Computer Science"),
     ).toBeVisible();
     await expect(page.getByText("September 2020 – January 2024")).toBeVisible();
-    await expect(
-      page.getByText("Completed my bachelor's degree in computer science"),
-    ).toBeVisible();
+    await expect(page.getByText("Completed my bachelor's")).toBeVisible();
   });
 
   test("Contact section", async ({ page }) => {
