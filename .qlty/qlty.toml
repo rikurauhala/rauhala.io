@@ -34,7 +34,7 @@ name = "actionlint"
 
 [[plugin]]
 name = "biome"
-version = "2.4.2"
+version = "2.4.16"
 
 [[plugin]]
 name = "markdownlint"
