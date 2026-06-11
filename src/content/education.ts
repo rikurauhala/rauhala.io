@@ -6,13 +6,11 @@ export const degrees: readonly Degree[] = [
     name: "Master of Science in Computer Science",
     institution: "University of Helsinki",
     startTime: "2024-01",
-    endTime: null,
+    endTime: "2026-05",
     description: `
-      Currently pursuing my master's degree in computer science in the Software
-      study track. Writing my master's thesis on the topic of software
+      Completed my master's degree in computer science in the Software
+      study track. I wrote my master's thesis on the topic of software
       maintainability metrics and static analysis.
-
-      Aiming to graduate in the spring of 2026.
     `,
   },
   {

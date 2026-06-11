@@ -17,6 +17,6 @@ export type Degree = {
   name: string;
   institution: string;
   startTime: string;
-  endTime: string | null;
+  endTime: string;
   description: string;
 };
