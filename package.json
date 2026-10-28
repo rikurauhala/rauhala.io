@@ -33,7 +33,7 @@
     "@axe-core/playwright": "^4.10.1",
     "@biomejs/biome": "2.5.15",
     "@playwright/test": "^1.52.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.0.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "typescript": "^6"
